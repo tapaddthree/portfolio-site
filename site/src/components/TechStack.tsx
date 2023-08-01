@@ -3,7 +3,7 @@ import Technology from "./Technology";
 
 export default function TechStack() {
   return (
-    <Panel styles="h-3/4">
+    <Panel technology>
       <Technology react />
       <Technology typeScript />
       <Technology javaScript />
@@ -12,7 +12,7 @@ export default function TechStack() {
       <Technology mongoDB />
       <Technology docker />
       <Technology django />
-      <Technology html />
+      <Technology html5 />
     </Panel>
   );
 }

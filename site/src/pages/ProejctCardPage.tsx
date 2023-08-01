@@ -3,7 +3,7 @@ import Panel from "../components/Panel";
 
 export default function ProjectCardPage() {
   return (
-    <Panel>
+    <Panel projectCard>
       <ProjectCard
         title="Tune Transfer"
         body="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quibusdam enim expedita praesentium aut dignissimos, facere deleniti maiores laborum eligendi delectus obcaecati, vitae ipsa eos."

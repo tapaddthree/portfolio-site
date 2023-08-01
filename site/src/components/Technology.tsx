@@ -9,7 +9,7 @@ type TechnologyProps = {
   fastAPI?: boolean;
   docker?: boolean;
   django?: boolean;
-  html?: boolean;
+  html5?: boolean;
 };
 
 export default function Technology({
@@ -21,7 +21,7 @@ export default function Technology({
   fastAPI,
   docker,
   django,
-  html,
+  html5,
 }: TechnologyProps) {
   const source = classNames({
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg":
@@ -41,8 +41,8 @@ export default function Technology({
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg":
       django,
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg":
-      html,
+      html5,
   });
 
-  return <img className="h-24" src={source} />;
+  return <img className="w-4/5 m-2 p-3 hover:scale-105" src={source} />;
 }
