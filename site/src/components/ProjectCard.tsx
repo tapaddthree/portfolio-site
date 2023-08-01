@@ -22,15 +22,10 @@ export default function ProjectCard({
 
   return (
     <div
-      className={`w-3/4 m-3 p-6 rounded-xl shadow-md hover:cursor-pointer hover:scale-105 ${cardConfig.bgColor}`}
+      className={`w-4/5 m-3 p-6 rounded-xl shadow-md hover:cursor-pointer hover:scale-105 ${cardConfig.bgColor}`}
       onClick={handleClick}
     >
-      <a>
-        <img
-          className="mx-auto w-3/6 h-3/6 mb-3"
-          src={cardConfig.image}
-        ></img>
-      </a>
+      <img className="mx-auto mb-3 w-48 h-40" src={cardConfig.image}></img>
       <span className="text-2xl font-bold">{title}</span>
       <div>{body}</div>
     </div>

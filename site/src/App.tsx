@@ -3,7 +3,7 @@ import ProjectCard from "./components/ProjectCard";
 function App() {
   return (
     <>
-      <div className="grid grid-cols-1 place-items-center w-fit h-fit md:grid-cols-2 lg:grid-cols-2">
+      <div className="container mx-auto grid grid-cols-1 place-items-center md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         <ProjectCard
           title="Tune Transfer"
           body="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quibusdam enim expedita praesentium aut dignissimos, facere deleniti maiores laborum eligendi delectus obcaecati, vitae ipsa eos."
