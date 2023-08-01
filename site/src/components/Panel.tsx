@@ -17,10 +17,9 @@ export default function Panel({
   technology,
 }: PanelProps) {
   const classes = classNames(className, {
-    "container mx-auto grid grid-cols-1 place-items-center md: grid-cols-2 lg:grid-cols-3":
+    "container mx-auto grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3":
       projectCard,
-    "container mx-auto grid grid-cols-1 place-items-center sm: grid-cols-1 lg: grid-cols-3":
-      technology,
+    "container mx-auto grid grid-cols-3 place-items-center": technology,
   });
 
   return <div className={classes}>{children}</div>;

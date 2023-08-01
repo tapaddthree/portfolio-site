@@ -4,8 +4,10 @@ import TechStack from "./components/TechStack";
 function App() {
   return (
     <>
-      <TechStack />
-      <ProjectCardPage />
+      <div className="bg-gray-100">
+        <ProjectCardPage />
+        <TechStack />
+      </div>
     </>
   );
 }
