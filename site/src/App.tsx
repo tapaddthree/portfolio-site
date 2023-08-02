@@ -1,14 +1,15 @@
-import ProjectCardPage from "./pages/ProejctCardPage";
+import ProjectCardPage from "./pages/ProjectCardPage";
 import TechStack from "./components/TechStack";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <>
-      <div className="bg-gray-100">
+    <div>
+      <NavBar />
+      {/* <div className="bg-green-500">
         <ProjectCardPage />
-        <TechStack />
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 }
 
