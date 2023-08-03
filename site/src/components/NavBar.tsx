@@ -3,7 +3,6 @@ import { MutableRefObject, useRef } from "react";
 
 export default function NavBar() {
   const burgerIconRef = useRef() as MutableRefObject<HTMLAnchorElement>;
-
   const navBarMenuRef = useRef() as MutableRefObject<HTMLDivElement>;
 
   const handleBurgerClick = () => {
