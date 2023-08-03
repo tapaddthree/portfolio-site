@@ -11,7 +11,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="navbar is-transparent">
+    <nav className="navbar is-transparent is-fixed-top">
       <div className="container">
         <div className="navbar-brand">
           <a className="navbar-item">
