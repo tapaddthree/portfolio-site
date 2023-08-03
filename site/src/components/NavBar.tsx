@@ -1,15 +1,47 @@
-import homeSwirl from "../media/homeSwirl.png";
+import logo from "../media/homeSwirl.png";
+import { MutableRefObject, useRef } from "react";
 
 export default function NavBar() {
+  const burgerIconRef = useRef() as MutableRefObject<HTMLAnchorElement>;
+  const navBarMenuRef = useRef() as MutableRefObject<HTMLDivElement>;
+
+  const handleBurgerClick = () => {
+    burgerIconRef.current.classList.toggle("is-active");
+    navBarMenuRef.current.classList.toggle("is-active");
+  };
+
   return (
-    <nav>
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://www.google.com" className="flex items-center">
-          <img src={homeSwirl} className="h-9" alt="Home Button" />
-        </a>
-        <span className="font-bold border-2 border-green-500 text-green-500 p-2 rounded-full hover:bg-green-500 hover:text-white">
-          Contact Me
-        </span>
+    <nav className="navbar is-transparent">
+      <div className="container">
+        <div className="navbar-brand">
+          <a className="navbar-item">
+            <img
+              src={logo}
+              style={{ maxHeight: "55px" }}
+              className="px-2 py-2"
+            />
+          </a>
+          <a
+            className="navbar-burger"
+            ref={burgerIconRef}
+            onClick={handleBurgerClick}
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </a>
+        </div>
+        <div className="navbar-menu is-shadowless" ref={navBarMenuRef}>
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="buttons is-centered is-shadowless">
+                <a className="button is-primary is-outlined is-rounded has-text-weight-medium">
+                  Contact Me
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );
