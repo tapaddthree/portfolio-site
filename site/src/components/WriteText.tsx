@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 export default function WriteText() {
-  const line1 = "Hi,";
-  const line2 = "I'm Jakob.";
-  const line3 = "Nice to meet you.";
+  const line1: string = "Hi,";
+  const line2: string = "I'm Jakob.";
+  const line3: string = "Nice to meet you.";
 
   const sentence = {
     hidden: { opacity: 1 },
