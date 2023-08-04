@@ -1,6 +1,23 @@
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
-export default function Card({ image, title, body, date }) {
+type CardProps = {
+  image: string;
+  title: string;
+  body: string;
+  date: string;
+  icons: ReactNode[];
+};
+
+export default function Card({ image, title, body, icons }: CardProps) {
+  const renderedIcons = icons.map((icon, index) => {
+    return (
+      <span className="icon ml-2 mt-5" key={index}>
+        {icon}
+      </span>
+    );
+  });
+
   return (
     <motion.div
       className="card is-clickable"
@@ -19,7 +36,7 @@ export default function Card({ image, title, body, date }) {
         </div>
         <div className="media-content has-text-left">
           {body}
-          <p>{date}</p>
+          <p className="has-text-right">{renderedIcons}</p>
         </div>
       </div>
     </motion.div>
