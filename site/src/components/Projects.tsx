@@ -1,4 +1,4 @@
-export default function Skills() {
+export default function Projects() {
   return (
     <section className="section">
       <div className="container">
