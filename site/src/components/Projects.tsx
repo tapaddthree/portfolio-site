@@ -12,7 +12,7 @@ export default function Projects() {
             className="columns is-centered has-text-centered"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.3 }}
             viewport={{ once: false }}
           >
             <div className="column">

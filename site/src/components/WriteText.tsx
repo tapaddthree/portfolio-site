@@ -10,7 +10,7 @@ export default function WriteText() {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5,
+        delay: 0.7,
         staggerChildren: 0.12,
       },
     },
@@ -27,7 +27,7 @@ export default function WriteText() {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.75 }}
+      transition={{ delay: 0.45 }}
       viewport={{ once: false }}
     >
       <motion.h1
