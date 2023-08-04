@@ -24,35 +24,42 @@ export default function WriteText() {
   };
 
   return (
-    <motion.h1
-      className="is-size-1 title"
-      variants={sentence}
-      initial="hidden"
-      animate="visible"
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.75 }}
+      viewport={{ once: false }}
     >
-      {line1.split("").map((char, index) => {
-        return (
-          <motion.span key={char + "-" + index} variants={letter}>
-            {char}
-          </motion.span>
-        );
-      })}
-      <br />
-      {line2.split("").map((char, index) => {
-        return (
-          <motion.span key={char + "-" + index} variants={letter}>
-            {char}
-          </motion.span>
-        );
-      })}
-      <br />
-      {line3.split("").map((char, index) => {
-        return (
-          <motion.span key={char + "-" + index} variants={letter}>
-            {char}
-          </motion.span>
-        );
-      })}
-    </motion.h1>
+      <motion.h1
+        className="is-size-1 title"
+        variants={sentence}
+        initial="hidden"
+        animate="visible"
+      >
+        {line1.split("").map((char, index) => {
+          return (
+            <motion.span key={char + "-" + index} variants={letter}>
+              {char}
+            </motion.span>
+          );
+        })}
+        <br />
+        {line2.split("").map((char, index) => {
+          return (
+            <motion.span key={char + "-" + index} variants={letter}>
+              {char}
+            </motion.span>
+          );
+        })}
+        <br />
+        {line3.split("").map((char, index) => {
+          return (
+            <motion.span key={char + "-" + index} variants={letter}>
+              {char}
+            </motion.span>
+          );
+        })}
+      </motion.h1>
+    </motion.div>
   );
 }
