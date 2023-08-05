@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import dachie from "../media/dachie.jpg";
+import placeholder from "../media/placeholder.png";
 import Card from "./Card";
 import {
   SiDjango,
@@ -28,7 +28,7 @@ export default function Projects() {
           >
             <div className="column">
               <Card
-                image={dachie}
+                image={placeholder}
                 title="Tune Transfer"
                 body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
                 date="July 2023"
@@ -44,7 +44,7 @@ export default function Projects() {
             </div>
             <div className="column">
               <Card
-                image={dachie}
+                image={placeholder}
                 title="Wealth Wizard"
                 body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
                 date="April 2023"
@@ -60,7 +60,7 @@ export default function Projects() {
             </div>
             <div className="column">
               <Card
-                image={dachie}
+                image={placeholder}
                 title="CarCar"
                 body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
                 date="March 2023"
