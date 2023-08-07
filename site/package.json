@@ -13,6 +13,7 @@
     "start": "npm run css-watch"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "bulma": "^0.9.4",
     "classnames": "^2.3.2",
     "emailjs-com": "^3.2.0",
