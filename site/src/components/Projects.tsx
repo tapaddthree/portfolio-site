@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import placeholder from "../media/placeholder.png";
+import ttHome from "../media/tuneTransfer/ttHome.png";
+import ttConvert from "../media/tuneTransfer/ttConvert.png";
 import Card from "./Card";
 import {
   SiDjango,
@@ -15,7 +17,7 @@ import {
 
 export default function Projects() {
   return (
-    <section className="section">
+    <section className="section has-background-primary">
       <div className="container">
         <div className="box">
           <div className="has-text-centered title">My Work</div>
@@ -28,7 +30,7 @@ export default function Projects() {
           >
             <div className="column">
               <Card
-                image={placeholder}
+                image={ttHome}
                 title="Tune Transfer"
                 body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
                 date="July 2023"
