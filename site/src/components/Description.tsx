@@ -13,9 +13,6 @@ export default function Description() {
               CSS, Docker and RESTful APIs.
             </p>
           </div>
-          <div className="column is-4">
-            <h1 className="title has-text-white">Skills</h1>
-          </div>
         </div>
       </div>
     </section>
