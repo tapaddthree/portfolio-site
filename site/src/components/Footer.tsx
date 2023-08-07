@@ -21,7 +21,7 @@ export default function Footer() {
         title: "Message sent succesfully",
       });
     } catch (error) {
-      console.log(error.text);
+      console.log(error);
       Swal.fire({
         icon: "error",
         title: "Oooops. Something went wrong",
@@ -67,6 +67,7 @@ export default function Footer() {
                     className="textarea"
                     name="message"
                     rows={5}
+                    style={{ maxHeight: "150px", minHeight: "150px" }}
                   ></textarea>
                 </div>
               </div>
