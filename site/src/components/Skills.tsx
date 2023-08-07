@@ -32,7 +32,7 @@ export default function Skills() {
   });
 
   return (
-    <section className="section is-medium has-text-centered">
+    <section className="section is-medium has-text-centered is-vcentered">
       <div className="container">
         <h1 className="title">Skills</h1>
         <div className="mt-6">{renderedSkills}</div>

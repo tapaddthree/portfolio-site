@@ -15,7 +15,7 @@ import {
 
 export default function Projects() {
   return (
-    <section className="section">
+    <section className="section has-background-primary">
       <div className="container">
         <div className="box">
           <div className="has-text-centered title">My Work</div>
