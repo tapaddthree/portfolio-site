@@ -9,25 +9,35 @@ import {
   SiMongodb,
   SiRedux,
 } from "react-icons/si";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Skills() {
+  const [skillName, setSkillName] = useState("");
+
   const skills = [
-    <SiDjango size={80} />,
-    <SiSpotify size={80} />,
-    <SiYoutube size={80} />,
-    <SiPython size={80} />,
-    <SiReact size={80} />,
-    <SiFastapi size={80} />,
-    <SiJavascript size={80} />,
-    <SiMongodb size={80} />,
-    <SiRedux size={80} />,
+    { icon: <SiDjango size={80} />, name: "Django" },
+    { icon: <SiSpotify size={80} />, name: "Spotify" },
+    { icon: <SiYoutube size={80} />, name: "YouTube" },
+    { icon: <SiPython size={80} />, name: "Python" },
+    { icon: <SiReact size={80} />, name: "React" },
+    { icon: <SiFastapi size={80} />, name: "FastAPI" },
+    { icon: <SiJavascript size={80} />, name: "JavaScript" },
+    { icon: <SiMongodb size={80} />, name: "MongoDB" },
+    { icon: <SiRedux size={80} />, name: "Redux" },
   ];
 
   const renderedSkills = skills.map((skill, index) => {
     return (
-      <span className="p-5" key={index}>
-        {skill}
-      </span>
+      <motion.div
+        key={index}
+        onMouseEnter={() => setSkillName(skill.name)}
+        onMouseLeave={() => setSkillName("")}
+        whileHover={{ scale: 1.25, transition: { duration: 0.25 } }}
+        className="column"
+      >
+        {skill.icon}
+      </motion.div>
     );
   });
 
@@ -35,7 +45,12 @@ export default function Skills() {
     <section className="section is-medium has-text-centered is-vcentered">
       <div className="container">
         <h1 className="title">Skills</h1>
-        <div className="mt-6">{renderedSkills}</div>
+        <div className="columns is-centered is-multiline is-mobile mt-6">
+          {renderedSkills}
+        </div>
+        <div className="has-text-weight-semibold is-size-5">
+          <div>{skillName}</div>
+        </div>
       </div>
     </section>
   );
