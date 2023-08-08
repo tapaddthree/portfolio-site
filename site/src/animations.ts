@@ -1,20 +1,17 @@
-export const dropIn = {
-  hidden: {
-    y: "-100vh",
-    opacity: 0,
-  },
+export const sentence = {
+  hidden: { opacity: 1 },
   visible: {
-    y: "0",
     opacity: 1,
     transition: {
-      duration: 0.1,
-      type: "spring",
-      damping: 25,
-      stiffness: 500,
+      delay: 0.7,
+      staggerChildren: 0.12,
     },
   },
-  exit: {
-    y: "100vh",
-    opacity: 0,
+};
+export const letter = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
   },
 };

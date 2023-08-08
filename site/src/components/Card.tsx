@@ -44,7 +44,7 @@ export default function Card({
             </div>
             <div className="media-content has-text-left">
               {body}
-              <p className="has-text-right">{renderedIcons}</p>
+              <div className="has-text-right">{renderedIcons}</div>
             </div>
           </div>
         </motion.div>
