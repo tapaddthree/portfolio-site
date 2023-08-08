@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import placeholder from "../media/placeholder.png";
+import wwHome from "../media/wealthWizard/wwHome.png";
 import ttHome from "../media/tuneTransfer/ttHome.png";
-import ttConvert from "../media/tuneTransfer/ttConvert.png";
-import Card from "./Card";
+import ccHome from "../media/carCar/ccHome.png";
+import Card from "../components/Card";
 import {
   SiDjango,
   SiSpotify,
@@ -15,7 +15,7 @@ import {
   SiRedux,
 } from "react-icons/si";
 
-export default function Projects() {
+export default function ProjectsPage() {
   return (
     <section className="section has-background-primary">
       <div className="container">
@@ -26,14 +26,12 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            viewport={{ once: false }}
           >
             <div className="column">
               <Card
                 image={ttHome}
                 title="Tune Transfer"
-                body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
-                date="July 2023"
+                body="Cutting edge music utility to seamlessly convert your music playlists between streaming services"
                 icons={[
                   <SiYoutube size={30} />,
                   <SiSpotify size={30} />,
@@ -42,14 +40,14 @@ export default function Projects() {
                   <SiPython size={30} />,
                   <SiJavascript size={30} />,
                 ]}
+                link="https://gitlab.com/jako1001/tune-transfer"
               />
             </div>
             <div className="column">
               <Card
-                image={placeholder}
+                image={wwHome}
                 title="Wealth Wizard"
-                body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
-                date="April 2023"
+                body="Real-time stock portfolio simulation tool using the Yahoo! Finance API"
                 icons={[
                   <SiMongodb size={30} />,
                   <SiFastapi size={30} />,
@@ -58,20 +56,21 @@ export default function Projects() {
                   <SiPython size={30} />,
                   <SiJavascript size={30} />,
                 ]}
+                link="https://hrgroup4.gitlab.io/wealth-wizard/"
               />
             </div>
             <div className="column">
               <Card
-                image={placeholder}
+                image={ccHome}
                 title="CarCar"
-                body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
-                date="March 2023"
+                body="Application for management of car a dealership's sales and service"
                 icons={[
                   <SiDjango size={30} />,
                   <SiReact size={30} />,
                   <SiPython size={30} />,
                   <SiJavascript size={30} />,
                 ]}
+                link="https://gitlab.com/jako1001/project-beta"
               />
             </div>
           </motion.div>
