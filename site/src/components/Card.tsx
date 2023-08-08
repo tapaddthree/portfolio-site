@@ -24,32 +24,31 @@ export default function Card({
     );
   });
 
-  const handleCardClick = () => {};
-
   return (
-    <a href={link}>
-      <motion.div
-        className="card is-clickable"
-        onClick={handleCardClick}
-        whileHover={{ scale: 1.05, transition: { duration: 0.25 } }}
-      >
-        <div className="card-image">
-          <figure className="image is-4by3">
-            <img src={image} alt="project image" />
-          </figure>
-        </div>
-        <div className="card-content">
-          <div className="media">
-            <div className="media-left">
-              <p className="title is-4">{title}</p>
+    <>
+      <a href={link} target="_blank">
+        <motion.div
+          whileHover={{ scale: 1.05, transition: { duration: 0.25 } }}
+          className="card is-clickable"
+        >
+          <div className="card-image">
+            <figure className="image is-16by9">
+              <img src={image} alt="project image" />
+            </figure>
+          </div>
+          <div className="card-content">
+            <div className="media">
+              <div className="media-left">
+                <p className="title is-4">{title}</p>
+              </div>
+            </div>
+            <div className="media-content has-text-left">
+              {body}
+              <p className="has-text-right">{renderedIcons}</p>
             </div>
           </div>
-          <div className="media-content has-text-left">
-            {body}
-            <p className="has-text-right">{renderedIcons}</p>
-          </div>
-        </div>
-      </motion.div>
-    </a>
+        </motion.div>
+      </a>
+    </>
   );
 }

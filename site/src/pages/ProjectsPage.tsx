@@ -1,7 +1,8 @@
-import { motion, useTransform } from "framer-motion";
-import placeholder from "../media/placeholder.png";
+import { motion } from "framer-motion";
+import wwHome from "../media/wealthWizard/wwHome.png";
 import ttHome from "../media/tuneTransfer/ttHome.png";
-import Card from "./Card";
+import ccHome from "../media/carCar/ccHome.png";
+import Card from "../components/Card";
 import {
   SiDjango,
   SiSpotify,
@@ -13,38 +14,24 @@ import {
   SiMongodb,
   SiRedux,
 } from "react-icons/si";
-import { useScroll } from "framer-motion";
-import { useRef, MutableRefObject } from "react";
 
-export default function Projects() {
-  const ref = useRef() as MutableRefObject<HTMLDivElement>;
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
+export default function ProjectsPage() {
   return (
-    <section ref={ref} className="section has-background-primary">
+    <section className="section has-background-primary">
       <div className="container">
         <div className="box">
           <div className="has-text-centered title">My Work</div>
           <motion.div
             className="columns is-centered has-text-centered"
             initial={{ opacity: 0 }}
-            style={{
-              scale: scaleProgress,
-              opacity: opacityProgress,
-            }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
           >
             <div className="column">
               <Card
                 image={ttHome}
                 title="Tune Transfer"
-                body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
+                body="Cutting edge music utility to seamlessly convert your music playlists between streaming services"
                 icons={[
                   <SiYoutube size={30} />,
                   <SiSpotify size={30} />,
@@ -58,9 +45,9 @@ export default function Projects() {
             </div>
             <div className="column">
               <Card
-                image={placeholder}
+                image={wwHome}
                 title="Wealth Wizard"
-                body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
+                body="Real-time stock portfolio simulation tool using the Yahoo! Finance API"
                 icons={[
                   <SiMongodb size={30} />,
                   <SiFastapi size={30} />,
@@ -74,15 +61,16 @@ export default function Projects() {
             </div>
             <div className="column">
               <Card
-                image={placeholder}
+                image={ccHome}
                 title="CarCar"
-                body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fugiat quo voluptate tempore vitae explicabo iste ipsam nihil. Nemo, vero."
+                body="Application for management of car a dealership's sales and service"
                 icons={[
                   <SiDjango size={30} />,
                   <SiReact size={30} />,
                   <SiPython size={30} />,
                   <SiJavascript size={30} />,
                 ]}
+                link="https://gitlab.com/jako1001/project-beta"
               />
             </div>
           </motion.div>
