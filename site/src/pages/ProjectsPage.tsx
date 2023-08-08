@@ -18,8 +18,8 @@ import {
 export default function ProjectsPage() {
   return (
     <section className="section has-background-primary">
-      <div className="container">
-        <div className="box">
+      <div className="container ">
+        <div className="box has-background-white-ter">
           <div className="has-text-centered title">My Work</div>
           <motion.div
             className="columns is-centered has-text-centered"
