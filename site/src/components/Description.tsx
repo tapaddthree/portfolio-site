@@ -6,11 +6,14 @@ export default function Description() {
           <div className="column is-5">
             <h1 className="title has-text-white">About Me</h1>
             <p>
-              As a software engineer I am passionate about using technology
-              to build innovative solutions. I have experience with a
-              variety of programming languages and technologies, including
-              React, FastAPI, Django, Python, JavaScript, MongoDB, SQL,
-              CSS, Docker and RESTful APIs.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Tempore excepturi atque iusto, nesciunt quod, exercitationem
+              dignissimos fugiat officiis voluptatibus reiciendis obcaecati
+              itaque eligendi. Reprehenderit nam quibusdam maxime
+              assumenda? Incidunt quae vel obcaecati corporis amet
+              doloremque laboriosam distinctio sint ipsum possimus suscipit
+              officia, veniam iusto, excepturi assumenda commodi fugit.
+              Fugit, consectetur?
             </p>
           </div>
         </div>
