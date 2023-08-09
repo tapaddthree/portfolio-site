@@ -1,5 +1,7 @@
 import logo from "../media/homeSwirl.png";
 import { MutableRefObject, useRef } from "react";
+import { motion } from "framer-motion";
+import Spin from "./Spin";
 
 type NavBarProps = {
   contactRef: MutableRefObject<HTMLDivElement>;
@@ -25,11 +27,13 @@ export default function NavBar({ contactRef }: NavBarProps) {
       <div className="container">
         <div className="navbar-brand">
           <a className="navbar-item">
-            <img
-              src={logo}
-              style={{ maxHeight: "55px" }}
-              className="px-2 py-2"
-            />
+            <Spin>
+              <img
+                src={logo}
+                style={{ maxHeight: "55px" }}
+                className="px-2 py-2"
+              />
+            </Spin>
           </a>
           <a
             className="navbar-burger"
@@ -45,12 +49,14 @@ export default function NavBar({ contactRef }: NavBarProps) {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons is-centered is-shadowless">
-                <button
+                <motion.button
                   onClick={() => scrollToBottom(contactRef)}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   className="button is-primary is-outlined is-rounded has-text-weight-medium"
                 >
                   Contact Me
-                </button>
+                </motion.button>
               </div>
             </div>
           </div>
