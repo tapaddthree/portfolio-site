@@ -22,7 +22,7 @@ export default function FooterOutro({ returnToTopRef }: FooterOutroProps) {
         <motion.div
           whileHover={{ scale: 1.5 }}
           whileTap={{ scale: 0.5 }}
-          className="column is-one-fifth"
+          className="column"
         >
           {i.icon}
         </motion.div>
