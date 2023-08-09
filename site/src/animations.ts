@@ -1,3 +1,5 @@
+import { MutableRefObject } from "react";
+
 export const sentence = {
   hidden: { opacity: 1 },
   visible: {
@@ -14,4 +16,16 @@ export const letter = {
     opacity: 1,
     y: 0,
   },
+};
+
+export const scrollToBottom = (e: MutableRefObject<HTMLDivElement>) => {
+  e.current.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+
+export const scrollToTop = (e: MutableRefObject<HTMLDivElement>) => {
+  e.current.scrollIntoView({
+    behavior: "smooth",
+  });
 };
