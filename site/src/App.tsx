@@ -4,7 +4,8 @@ import Intro from "./components/Intro";
 import Description from "./components/Description";
 import ProjectsPage from "./pages/ProjectsPage";
 import Skills from "./components/Skills";
-import Footer from "./components/Footer";
+import FooterForm from "./components/FooterForm";
+import FooterOutro from "./components/FooterOutro";
 
 function App() {
   const contactRef = useRef() as MutableRefObject<HTMLDivElement>;
@@ -16,9 +17,9 @@ function App() {
       <Description />
       <Skills />
       <ProjectsPage />
-      <div ref={contactRef}>
-        <Footer />
-      </div>
+      <div ref={contactRef} className="pt-4"></div>
+      <FooterForm />
+      <FooterOutro />
     </>
   );
 }

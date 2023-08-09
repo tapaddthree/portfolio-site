@@ -2,29 +2,27 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { ChangeEvent, MutableRefObject, useRef } from "react";
 
-export default function Footer() {
+export default function FooterForm() {
   const formRef = useRef() as MutableRefObject<HTMLFormElement>;
 
   async function handleOnSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
 
     try {
-      const res = await emailjs.sendForm(
+      await emailjs.sendForm(
         import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
         import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
         formRef.current,
         import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
       );
-      console.log(res.text);
       Swal.fire({
         icon: "success",
         title: "Message sent succesfully",
       });
     } catch (error) {
-      console.log(error);
       Swal.fire({
         icon: "error",
-        title: "Oooops. Something went wrong",
+        title: "Ooops. Something went wrong",
         text: error.text,
       });
     }
@@ -34,10 +32,8 @@ export default function Footer() {
   return (
     <section className="section">
       <div className="container is-max-widescreen">
-        <div className="has-text-centered is-size-3 mb-6">
-          <span className="is-italic has-text-weight-semibold">
-            Let's talk.
-          </span>
+        <div className="has-text-centered is-size-3 mb-6 is-italic has-text-weight-semibold">
+          Let's talk.
         </div>
         <form ref={formRef} onSubmit={handleOnSubmit}>
           <div className="columns is-centered">
