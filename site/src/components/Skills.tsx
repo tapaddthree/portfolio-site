@@ -16,6 +16,7 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { sentence, letter } from "../animations";
 
 export default function Skills() {
   const [skillName, setSkillName] = useState("");
@@ -44,6 +45,7 @@ export default function Skills() {
         onMouseEnter={() => setSkillName(skill.name)}
         onMouseLeave={() => setSkillName("")}
         whileHover={{ scale: 1.25, transition: { duration: 0.25 } }}
+        variants={letter}
         className="column is-narrow"
       >
         {skill.icon}
@@ -55,9 +57,14 @@ export default function Skills() {
     <section className="section has-text-centered is-vcentered">
       <div className="container">
         <h1 className="title">Skills</h1>
-        <div className="columns is-centered is-multiline is-mobile mt-6">
+        <motion.div
+          variants={sentence}
+          initial="hidden"
+          whileInView="visible"
+          className="columns is-centered is-multiline is-mobile mt-6"
+        >
           {renderedSkills}
-        </div>
+        </motion.div>
         <div
           className="has-text-weight-semibold is-size-5"
           style={{
