@@ -8,7 +8,7 @@ export default function Intro() {
         <div className="columns is-vcentered">
           <div className="column has-text-centered">
             <figure className="image is-square">
-              <img src={me} loading="lazy" />
+              <img src={me} />
             </figure>
           </div>
           <div className="column has-text-centered">
