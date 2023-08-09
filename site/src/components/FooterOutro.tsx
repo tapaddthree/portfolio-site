@@ -12,20 +12,21 @@ type FooterOutroProps = {
 
 export default function FooterOutro({ returnToTopRef }: FooterOutroProps) {
   const icons = [
-    { icon: <SiGithub size={25} />, name: "Github" },
-    { icon: <SiGitlab size={25} />, name: "Gitlab" },
+    { icon: <SiGithub size={25} />, link: "https://github.com/jako1001" },
+    { icon: <SiGitlab size={25} />, link: "https://gitlab.com/jako1001" },
   ];
 
   const renderedIcons = icons.map((i, index) => {
     return (
-      <motion.div
-        whileHover={{ scale: 1.5 }}
-        whileTap={{ scale: 0.5 }}
-        key={index}
-        className="column is-one-fifth"
-      >
-        {i.icon}
-      </motion.div>
+      <a href={i.link} key={index} className="has-text-black">
+        <motion.div
+          whileHover={{ scale: 1.5 }}
+          whileTap={{ scale: 0.5 }}
+          className="column is-one-fifth"
+        >
+          {i.icon}
+        </motion.div>
+      </a>
     );
   });
 
