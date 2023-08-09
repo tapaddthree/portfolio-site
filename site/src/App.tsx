@@ -9,17 +9,19 @@ import FooterOutro from "./components/FooterOutro";
 
 function App() {
   const contactRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const returnToTopRef = useRef() as MutableRefObject<HTMLDivElement>;
 
   return (
     <>
-      <NavBar contactRef={contactRef} />
+      <div ref={returnToTopRef} style={{ scrollMarginTop: "60px" }} />
+      <NavBar contactRef={contactRef} returnToTopRef={returnToTopRef} />
       <Intro />
       <Description />
       <Skills />
       <ProjectsPage />
-      <div ref={contactRef} className="pt-4"></div>
+      <div ref={contactRef} style={{ scrollMarginTop: "70px" }} />
       <FooterForm />
-      <FooterOutro />
+      <FooterOutro returnToTopRef={returnToTopRef} />
     </>
   );
 }

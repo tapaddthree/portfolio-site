@@ -2,24 +2,23 @@ import logo from "../media/homeSwirl.png";
 import { MutableRefObject, useRef } from "react";
 import { motion } from "framer-motion";
 import Spin from "./Spin";
+import { scrollToBottom, scrollToTop } from "../animations";
 
 type NavBarProps = {
   contactRef: MutableRefObject<HTMLDivElement>;
+  returnToTopRef: MutableRefObject<HTMLDivElement>;
 };
 
-export default function NavBar({ contactRef }: NavBarProps) {
+export default function NavBar({
+  contactRef,
+  returnToTopRef,
+}: NavBarProps) {
   const burgerIconRef = useRef() as MutableRefObject<HTMLAnchorElement>;
   const navBarMenuRef = useRef() as MutableRefObject<HTMLDivElement>;
 
   const handleBurgerClick = () => {
     burgerIconRef.current.classList.toggle("is-active");
     navBarMenuRef.current.classList.toggle("is-active");
-  };
-
-  const scrollToBottom = (e: MutableRefObject<HTMLDivElement>) => {
-    e.current.scrollIntoView({
-      behavior: "smooth",
-    });
   };
 
   const handleContactButtonClick = () => {
@@ -34,6 +33,7 @@ export default function NavBar({ contactRef }: NavBarProps) {
           <a className="navbar-item">
             <Spin>
               <img
+                onClick={() => scrollToTop(returnToTopRef)}
                 src={logo}
                 style={{ maxHeight: "55px" }}
                 className="px-2 py-2"
