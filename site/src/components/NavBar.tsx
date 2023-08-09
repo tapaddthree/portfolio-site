@@ -22,6 +22,11 @@ export default function NavBar({ contactRef }: NavBarProps) {
     });
   };
 
+  const handleContactButtonClick = () => {
+    handleBurgerClick();
+    scrollToBottom(contactRef);
+  };
+
   return (
     <nav className="navbar is-transparent is-fixed-top">
       <div className="container">
@@ -50,7 +55,7 @@ export default function NavBar({ contactRef }: NavBarProps) {
             <div className="navbar-item">
               <div className="buttons is-centered is-shadowless">
                 <motion.button
-                  onClick={() => scrollToBottom(contactRef)}
+                  onClick={handleContactButtonClick}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   className="button is-primary is-outlined is-rounded has-text-weight-medium"
