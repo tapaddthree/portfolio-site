@@ -13,6 +13,7 @@ import {
   SiGitlab,
   SiVite,
   SiBulma,
+  SiDocker,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -36,6 +37,7 @@ export default function Skills() {
     { icon: <SiGitlab size={80} />, name: "Gitlab" },
     { icon: <SiVite size={80} />, name: "Vite" },
     { icon: <SiBulma size={80} />, name: "Bulma" },
+    { icon: <SiDocker size={80} />, name: "Docker" },
   ];
 
   const renderedSkills = skills.map((skill, index) => {
@@ -61,6 +63,7 @@ export default function Skills() {
           variants={sentence}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="columns is-centered is-multiline is-mobile mt-6"
         >
           {renderedSkills}

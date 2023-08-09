@@ -1,13 +1,23 @@
 import logo from "../media/homeSwirl.png";
 import { MutableRefObject, useRef } from "react";
 
-export default function NavBar() {
+type NavBarProps = {
+  contactRef: MutableRefObject<HTMLDivElement>;
+};
+
+export default function NavBar({ contactRef }: NavBarProps) {
   const burgerIconRef = useRef() as MutableRefObject<HTMLAnchorElement>;
   const navBarMenuRef = useRef() as MutableRefObject<HTMLDivElement>;
 
   const handleBurgerClick = () => {
     burgerIconRef.current.classList.toggle("is-active");
     navBarMenuRef.current.classList.toggle("is-active");
+  };
+
+  const scrollToBottom = (e: MutableRefObject<HTMLDivElement>) => {
+    e.current.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -35,9 +45,12 @@ export default function NavBar() {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons is-centered is-shadowless">
-                <a className="button is-primary is-outlined is-rounded has-text-weight-medium">
+                <button
+                  onClick={() => scrollToBottom(contactRef)}
+                  className="button is-primary is-outlined is-rounded has-text-weight-medium"
+                >
                   Contact Me
-                </a>
+                </button>
               </div>
             </div>
           </div>
