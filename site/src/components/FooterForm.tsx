@@ -9,6 +9,19 @@ export default function FooterForm() {
   async function handleOnSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
 
+    if (
+      formRef.current[0].value.length === 0 &&
+      formRef.current[1].value.length === 0 &&
+      formRef.current[2].value.length === 0
+    ) {
+      Swal.fire({
+        icon: "error",
+        title: "Ooops. Something went wrong",
+        text: "Form cannot be empty.",
+      });
+      return;
+    }
+
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_EMAIL_JS_SERVICE_ID,

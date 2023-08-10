@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap"); /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"); /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .pagination-previous,
 .pagination-next,
@@ -323,7 +323,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Bricolage Grotesque", serif;
+  font-family: "Ubuntu", serif;
 }
 
 code,
@@ -9160,7 +9160,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .is-family-primary {
-  font-family: "Bricolage Grotesque", serif !important;
+  font-family: "Ubuntu", serif !important;
 }
 
 .is-family-secondary {
