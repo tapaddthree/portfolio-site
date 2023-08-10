@@ -48,7 +48,7 @@ export default function FooterOutro({ returnToTopRef }: FooterOutroProps) {
           className="px-2 py-2 is-clickable"
         />
 
-        <div className="content has-text-black">
+        <div className="content has-text-white">
           <div className="columns is-centered is-mobile mt-3">
             {renderedIcons}
           </div>
