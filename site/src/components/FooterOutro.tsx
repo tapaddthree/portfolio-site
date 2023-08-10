@@ -2,7 +2,6 @@ import logo from "../media/homeSwirl.png";
 import { motion } from "framer-motion";
 import { CgCopyright } from "react-icons/cg";
 import { SiGithub, SiGitlab } from "react-icons/si";
-import madeWithBulma from "../media/madeWithBulma.png";
 import { scrollToTop } from "../animations";
 import { MutableRefObject } from "react";
 
@@ -56,14 +55,6 @@ export default function FooterOutro({ returnToTopRef }: FooterOutroProps) {
           <h1 className="is-size-6 has-text-weight-semibold pt-2 has-text-black">
             Jakob Schweter <CgCopyright /> 2023
           </h1>
-          <a href="https://bulma.io" target="_blank">
-            <figure className="image">
-              <img
-                src={madeWithBulma}
-                style={{ width: "128px", height: "24px" }}
-              />
-            </figure>
-          </a>
         </div>
       </div>
     </section>
