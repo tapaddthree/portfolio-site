@@ -10,9 +10,9 @@ export default function FooterForm() {
     e.preventDefault();
 
     if (
-      formRef.current[0].value.length === 0 &&
-      formRef.current[1].value.length === 0 &&
-      formRef.current[2].value.length === 0
+      (formRef.current[0] as HTMLFormElement).value.length === 0 &&
+      (formRef.current[1] as HTMLFormElement).value.length === 0 &&
+      (formRef.current[2] as HTMLFormElement).value.length === 0
     ) {
       Swal.fire({
         icon: "error",
