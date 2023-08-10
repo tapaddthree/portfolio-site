@@ -14,9 +14,9 @@ export default function Description() {
         setDescText("Gamer");
       }
       if (descText === "Gamer") {
-        setDescText("MTG Nerd");
+        setDescText("Professional Nerd");
       }
-      if (descText === "MTG Nerd") {
+      if (descText === "Professional Nerd") {
         setDescText("Software Engineer");
       }
     };
