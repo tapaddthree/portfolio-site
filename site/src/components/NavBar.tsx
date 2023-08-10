@@ -30,10 +30,12 @@ export default function NavBar({
     <nav className="navbar is-transparent is-fixed-top">
       <div className="container">
         <div className="navbar-brand">
-          <a className="navbar-item">
+          <a
+            onClick={() => scrollToTop(returnToTopRef)}
+            className="navbar-item"
+          >
             <Spin>
               <img
-                onClick={() => scrollToTop(returnToTopRef)}
                 src={logo}
                 style={{ maxHeight: "55px" }}
                 className="px-2 py-2"

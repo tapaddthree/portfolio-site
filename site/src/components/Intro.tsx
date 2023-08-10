@@ -11,7 +11,7 @@ export default function Intro() {
               <img src={me} />
             </figure>
           </div>
-          <div className="column has-text-centered">
+          <div className="column has-text-centered has-text-black">
             <WriteText />
           </div>
         </div>

@@ -42,9 +42,11 @@ export default function Card({
                 <p className="title is-4">{title}</p>
               </div>
             </div>
-            <div className="media-content has-text-left">
+            <div className="media-content has-text-left has-text-black">
               {body}
-              <div className="has-text-right">{renderedIcons}</div>
+              <div className="has-text-right has-text-black">
+                {renderedIcons}
+              </div>
             </div>
           </div>
         </motion.div>

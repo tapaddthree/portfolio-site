@@ -22,7 +22,7 @@ export default function Skills() {
   });
 
   return (
-    <section className="section has-text-centered is-vcentered">
+    <section className="section has-text-centered has-text-black is-vcentered">
       <div className="container">
         <h1 className="title">Skills</h1>
         <motion.div
