@@ -1,6 +1,7 @@
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { ChangeEvent, MutableRefObject, useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function FooterForm() {
   const formRef = useRef() as MutableRefObject<HTMLFormElement>;
@@ -41,7 +42,13 @@ export default function FooterForm() {
               <div className="field">
                 <label className="label">Name</label>
                 <div className="control">
-                  <input type="text" name="from_name" className="input" />
+                  <input
+                    type="text"
+                    name="from_name"
+                    className="input"
+                    minLength={3}
+                    maxLength={30}
+                  />
                 </div>
               </div>
             </div>
@@ -49,7 +56,12 @@ export default function FooterForm() {
               <div className="field">
                 <label className="label">Email</label>
                 <div className="control">
-                  <input type="text" name="from_email" className="input" />
+                  <input
+                    type="text"
+                    name="from_email"
+                    className="input"
+                    minLength={6}
+                  />
                 </div>
               </div>
             </div>
@@ -63,6 +75,8 @@ export default function FooterForm() {
                     className="textarea"
                     name="message"
                     rows={5}
+                    minLength={10}
+                    maxLength={600}
                     style={{ maxHeight: "150px", minHeight: "150px" }}
                   ></textarea>
                 </div>
@@ -73,12 +87,14 @@ export default function FooterForm() {
             <div className="column is-one-fifth">
               <div className="field">
                 <div className="control">
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.9 }}
                     type="submit"
                     className="button is-primary is-outlined is-rounded is-medium has-text-weight-medium is-fullwidth"
                   >
                     Submit
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </div>
