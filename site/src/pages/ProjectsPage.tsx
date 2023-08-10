@@ -6,7 +6,7 @@ export default function ProjectsPage() {
       <div className="container ">
         <div className="box has-background-white-ter">
           <div className="has-text-centered title">My Work</div>
-          <div className="columns is-centered has-text-centered">
+          <div className="columns is-centered is-multilinehas-text-centered">
             {projects}
           </div>
         </div>

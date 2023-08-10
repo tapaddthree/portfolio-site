@@ -3,21 +3,21 @@ import { useEffect, useState } from "react";
 import { letter, sentence } from "../animations";
 
 export default function Description() {
-  const [descText, setDescText] = useState("Software Developer");
+  const [descText, setDescText] = useState("Software Engineer");
 
   const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
   useEffect(() => {
     const alternateText = async () => {
-      if (descText === "Software Developer") {
-        await sleep(2000);
+      if (descText === "Software Engineer") {
+        await sleep(3000);
         setDescText("Gamer");
       }
       if (descText === "Gamer") {
         setDescText("MTG Nerd");
       }
       if (descText === "MTG Nerd") {
-        setDescText("Software Developer");
+        setDescText("Software Engineer");
       }
     };
 

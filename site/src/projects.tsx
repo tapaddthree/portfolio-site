@@ -1,5 +1,4 @@
 import {
-  SiDjango,
   SiSpotify,
   SiYoutube,
   SiPython,
@@ -8,11 +7,15 @@ import {
   SiJavascript,
   SiMongodb,
   SiRedux,
+  SiTypescript,
+  SiBulma,
+  SiDocker,
+  SiVite,
 } from "react-icons/si";
 import Card from "./components/Card";
 import wwHome from "./media/wealthWizard/wwHome.png";
 import ttHome from "./media/tuneTransfer/ttHome.png";
-import ccHome from "./media/carCar/ccHome.png";
+import ppHome from "./media/portfolio/ppHome.png";
 import { motion } from "framer-motion";
 
 const projectsArray = [
@@ -31,10 +34,24 @@ const projectsArray = [
     link="https://gitlab.com/jako1001/tune-transfer"
   />,
   <Card
+    image={ppHome}
+    title="My Portfolio Page"
+    body="This is the portfolio that you are currently looking at. Wow, that's a brain twister"
+    icons={[
+      <SiDocker size={30} />,
+      <SiBulma size={30} />,
+      <SiVite size={30} />,
+      <SiReact size={30} />,
+      <SiTypescript size={30} />,
+    ]}
+    link="https://hrgroup4.gitlab.io/wealth-wizard/"
+  />,
+  <Card
     image={wwHome}
     title="Wealth Wizard"
     body="Real-time stock portfolio simulation tool using the Yahoo! Finance API"
     icons={[
+      <SiDocker size={30} />,
       <SiMongodb size={30} />,
       <SiFastapi size={30} />,
       <SiRedux size={30} />,
@@ -43,18 +60,6 @@ const projectsArray = [
       <SiJavascript size={30} />,
     ]}
     link="https://hrgroup4.gitlab.io/wealth-wizard/"
-  />,
-  <Card
-    image={ccHome}
-    title="CarCar"
-    body="Application for management of car a dealership's sales and service"
-    icons={[
-      <SiDjango size={30} />,
-      <SiReact size={30} />,
-      <SiPython size={30} />,
-      <SiJavascript size={30} />,
-    ]}
-    link="https://gitlab.com/jako1001/project-beta"
   />,
 ];
 
