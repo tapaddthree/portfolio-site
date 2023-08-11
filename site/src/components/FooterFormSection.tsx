@@ -1,6 +1,6 @@
 import ContactForm from "./ContactForm";
 
-export default function FooterForm() {
+export default function FooterFormSection() {
   return (
     <section className="section has-text-black">
       <div className="container is-max-widescreen">
