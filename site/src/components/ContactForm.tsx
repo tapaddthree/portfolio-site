@@ -106,7 +106,7 @@ export default function ContactForm() {
                 whileTap={{ scale: 0.9 }}
                 type="submit"
                 disabled={state.submitting}
-                className="button is-primary is-outlined is-rounded is-medium has-text-weight-medium is-fullwidth"
+                className="button is-black is-outlined is-rounded is-medium has-text-weight-medium is-fullwidth"
               >
                 Submit
               </motion.button>
