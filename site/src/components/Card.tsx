@@ -30,6 +30,7 @@ export default function Card({
         <motion.div
           whileHover={{ scale: 1.05, transition: { duration: 0.25 } }}
           className="card is-clickable"
+          style={{ height: "100%" }}
         >
           <div className="card-image">
             <figure className="image is-16by9">
