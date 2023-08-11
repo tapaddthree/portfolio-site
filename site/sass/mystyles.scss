@@ -17,6 +17,8 @@ $control-border-width: 2px;
 $family-serif: "Ubuntu", serif;
 $family-primary: $family-serif;
 
+@import "../node_modules/bulma/bulma.sass";
+
 // Update some of Bulma's component variables
 // $body-background-color: $beige-lighter;
 // $control-border-width: 2px;
@@ -24,4 +26,3 @@ $family-primary: $family-serif;
 // $input-shadow: none;
 
 // Import only what you need from Bulma
-@import "../node_modules/bulma/bulma.sass";
