@@ -17,7 +17,15 @@ $grey-light: $tan;
 $control-border-width: 2px;
 $family-serif: "Ubuntu", serif;
 $family-primary: $family-serif;
+$card-background-color: $tan;
+
 @import "../node_modules/bulma/bulma.sass";
+
+.card {
+  border-style: solid;
+  border-color: #444443;
+  border-width: 2px;
+}
 
 // Update some of Bulma's component variables
 // $body-background-color: $beige-lighter;

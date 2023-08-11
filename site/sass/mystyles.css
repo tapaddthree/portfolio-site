@@ -3817,7 +3817,7 @@ a.tag:hover {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #f1f2ec;
   border-radius: 0.25rem;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
   color: hsl(0, 0%, 29%);
@@ -10280,4 +10280,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: hsl(0, 0%, 98%);
   padding: 3rem 1.5rem 6rem;
+}
+
+.card {
+  border-style: solid;
+  border-color: #444443;
+  border-width: 2px;
 }/*# sourceMappingURL=mystyles.css.map */
