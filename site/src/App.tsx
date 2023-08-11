@@ -1,10 +1,9 @@
-import Panel from "./ components/Panel";
+import MainPage from "./pages/MainPage";
 
 function App() {
   return (
     <>
-      <div>Hello!</div>
-      <Panel title="TEST TITLE" body="TEST BODY" />
+      <MainPage />
     </>
   );
 }
