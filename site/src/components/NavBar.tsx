@@ -32,7 +32,7 @@ export default function NavBar({
         <div className="navbar-brand">
           <a
             onClick={() => scrollToTop(returnToTopRef)}
-            className="navbar-item"
+            className="navbar-item has-background-grey-light"
           >
             <Spin>
               <img
