@@ -3,7 +3,7 @@ import WriteText from "./WriteText";
 
 export default function Intro() {
   return (
-    <section className="section">
+    <section className="section has-background-grey-light">
       <div className="container">
         <div className="columns is-vcentered">
           <div className="column has-text-centered">

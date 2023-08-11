@@ -27,7 +27,7 @@ export default function NavBar({
   };
 
   return (
-    <nav className="navbar is-transparent is-fixed-top">
+    <nav className="navbar is-transparent is-fixed-top has-background-grey-light">
       <div className="container">
         <div className="navbar-brand">
           <a
@@ -52,7 +52,10 @@ export default function NavBar({
             <span aria-hidden="true" />
           </a>
         </div>
-        <div className="navbar-menu is-shadowless" ref={navBarMenuRef}>
+        <div
+          className="navbar-menu is-shadowless has-background-grey-light"
+          ref={navBarMenuRef}
+        >
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons is-centered is-shadowless">
@@ -60,7 +63,7 @@ export default function NavBar({
                   onClick={handleContactButtonClick}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="button is-primary is-outlined is-rounded has-text-weight-medium"
+                  className="button is-black is-outlined is-rounded has-text-weight-medium"
                 >
                   Contact Me
                 </motion.button>
