@@ -48,7 +48,7 @@ const projectsArray = [
       <SiReact size={30} />,
       <SiTypescript size={30} />,
     ]}
-    link="https://hrgroup4.gitlab.io/wealth-wizard/"
+    link="https://github.com/jako1001/portfolio-site"
   />,
   <Card
     image={wwHome}
