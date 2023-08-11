@@ -4,7 +4,7 @@ import Intro from "./components/Intro";
 import Description from "./components/Description";
 import ProjectsPage from "./pages/ProjectsPage";
 import Skills from "./components/Skills";
-import FooterForm from "./components/FooterForm";
+import FooterFormSection from "./components/FooterFormSection";
 import FooterOutro from "./components/FooterOutro";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       <Skills />
       <ProjectsPage />
       <div ref={contactRef} style={{ scrollMarginTop: "70px" }} />
-      <FooterForm />
+      <FooterFormSection />
       <FooterOutro returnToTopRef={returnToTopRef} />
     </>
   );
