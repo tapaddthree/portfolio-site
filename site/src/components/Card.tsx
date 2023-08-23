@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { useNavigate } from "react-router-dom";
 
 type CardProps = {
   image: string;
   title: string;
   body: string;
   icons: ReactNode[];
-  link: string;
+  onClickPage: string;
 };
 
 export default function Card({
@@ -14,8 +15,10 @@ export default function Card({
   title,
   body,
   icons,
-  link,
+  onClickPage,
 }: CardProps) {
+  const navigate = useNavigate();
+
   const renderedIcons = icons.map((icon, index) => {
     return (
       <span className="icon ml-2 mt-5" key={index}>
@@ -26,7 +29,7 @@ export default function Card({
 
   return (
     <>
-      <a href={link} target="_blank">
+      <a onClick={() => navigate(onClickPage)}>
         <motion.div
           whileHover={{ scale: 1.05, transition: { duration: 0.25 } }}
           className="card is-clickable"

@@ -25,6 +25,8 @@ export const scrollToBottom = (e: MutableRefObject<HTMLDivElement>) => {
 };
 
 export const scrollToTop = (e: MutableRefObject<HTMLDivElement>) => {
+  if (!e) return;
+
   e.current.scrollIntoView({
     behavior: "smooth",
   });

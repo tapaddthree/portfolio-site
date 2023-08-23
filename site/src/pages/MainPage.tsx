@@ -14,7 +14,11 @@ export default function MainPage() {
   return (
     <>
       <div ref={returnToTopRef} style={{ scrollMarginTop: "60px" }} />
-      <NavBar contactRef={contactRef} returnToTopRef={returnToTopRef} />
+      <NavBar
+        contactRef={contactRef}
+        returnToTopRef={returnToTopRef}
+        contact={true}
+      />
       <Intro />
       <Description />
       <Skills />

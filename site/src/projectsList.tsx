@@ -34,7 +34,7 @@ const projectsArray = [
       <SiPython size={30} />,
       <SiJavascript size={30} />,
     ]}
-    link="https://gitlab.com/jako1001/tune-transfer"
+    onClickPage="/tune"
   />,
   <Card
     image={ppHome}
@@ -48,7 +48,7 @@ const projectsArray = [
       <SiReact size={30} />,
       <SiTypescript size={30} />,
     ]}
-    link="https://hrgroup4.gitlab.io/wealth-wizard/"
+    onClickPage="/portfolio"
   />,
   <Card
     image={wwHome}
@@ -64,7 +64,7 @@ const projectsArray = [
       <SiPython size={30} />,
       <SiJavascript size={30} />,
     ]}
-    link="https://hrgroup4.gitlab.io/wealth-wizard/"
+    onClickPage="wizard"
   />,
 ];
 
