@@ -1,4 +1,4 @@
-import { React, MutableRefObject, useRef } from "react";
+import { MutableRefObject, useRef } from "react";
 import { motion } from "framer-motion";
 import { pageFadeIn } from "../animations";
 import NavBar from "../components/NavBar";
