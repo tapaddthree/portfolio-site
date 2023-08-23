@@ -4,8 +4,8 @@ import { scrollToBottom } from "../animations";
 import HomeSwirl from "./HomeSwirl";
 
 type NavBarProps = {
-  contactRef: MutableRefObject<HTMLDivElement>;
-  returnToTopRef: MutableRefObject<HTMLDivElement>;
+  contactRef?: MutableRefObject<HTMLDivElement>;
+  returnToTopRef?: MutableRefObject<HTMLDivElement>;
   contact?: boolean;
   homeButtonRedirect?: boolean;
 };
