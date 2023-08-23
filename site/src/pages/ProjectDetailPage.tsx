@@ -1,3 +1,3 @@
 export default function ProjectDetailPage() {
-  return <div>Hello!</div>;
+  return <div>hello!</div>;
 }

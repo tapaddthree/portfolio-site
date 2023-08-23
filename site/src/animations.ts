@@ -5,11 +5,12 @@ export const sentence = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.7,
+      delay: 1,
       staggerChildren: 0.12,
     },
   },
 };
+
 export const letter = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -30,4 +31,16 @@ export const scrollToTop = (e: MutableRefObject<HTMLDivElement>) => {
   e.current.scrollIntoView({
     behavior: "smooth",
   });
+};
+
+export const pageFadeIn = {
+  initial: { opacity: 0, x: -2000 },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: { opacity: 0, x: -100, transition: { duration: 0.75 } },
 };
