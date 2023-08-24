@@ -2,20 +2,31 @@ import { motion } from "framer-motion";
 import { pageFadeIn } from "../animations";
 import NavBar from "./NavBar";
 import Accordion from "./Accordion";
+import { ReactNode, useEffect } from "react";
 
-export default function ProjectDetail() {
-  const accordionData = [
-    {
-      title: "What I did today, Aug. 24",
-      body: "I did accordion work",
-      id: 1,
-    },
-    {
-      title: "What I did today, Aug. 25",
-      body: "I did accordion work",
-      id: 2,
-    },
-  ];
+type ProjectDetailProps = {
+  title: string;
+  skills: ReactNode[];
+};
+
+export default function ProjectDetail({
+  title,
+  skills,
+  images,
+  description,
+  accordionData,
+}: ProjectDetailProps) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const renderedSkills = skills.map((skill, index) => {
+    return (
+      <span key={index} className="column is-narrow">
+        {skill && skill.icon}
+      </span>
+    );
+  });
 
   return (
     <>
@@ -29,25 +40,17 @@ export default function ProjectDetail() {
       >
         <div className="container has-text-black">
           <div className="box has-background-primary">
-            <div className="columns">
+            <div className="columns has-text-black">
               <div className="column">
-                <div className="title">Project</div>
+                <div className="title">{title}</div>
               </div>
-              <div className="column">
-                <div className="title has-text-right">Skill Icons</div>
-              </div>
+              {renderedSkills}
             </div>
             <div className="box has-background-grey-light has-text-centered">
-              Maybe a carousel of images?
+              <img src={images} className="is-mobile" />
             </div>
             <div className="box has-background-grey-light ">
-              Description of project blah blah blah Lorem ipsum dolor sit,
-              amet consectetur adipisicing elit. Magni, porro repellat,
-              omnis id libero itaque repudiandae eum fugiat quaerat impedit
-              quis ipsam reprehenderit at quidem aliquid. Ut et impedit,
-              ullam laborum corporis dolor animi! Error tenetur ea debitis
-              consequatur? Quidem eos fuga, necessitatibus quaerat
-              praesentium et obcaecati atque suscipit minus!
+              {description}
             </div>
             <Accordion accordionData={accordionData} />
           </div>

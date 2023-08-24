@@ -5,8 +5,10 @@ import {
   useLocation,
 } from "react-router-dom";
 import MainPage from "./pages/MainPage";
-import ProjectDetail from "./components/ProjectDetail";
 import { AnimatePresence } from "framer-motion";
+import TuneTransferDetail from "./components/projects/TuneTransferDetail";
+import PortfolioDetail from "./components/projects/PortfolioDetail";
+import WizardDetail from "./components/projects/WizardDetail";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -15,20 +17,18 @@ const AnimatedRoutes = () => {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<MainPage />} />
-        <Route path="/tune" element={<ProjectDetail />} />
-        <Route path="/portfolio" element={<ProjectDetail />} />
-        <Route path="/wizard" element={<ProjectDetail />} />
+        <Route path="/tune" element={<TuneTransferDetail />} />
+        <Route path="/portfolio" element={<PortfolioDetail />} />
+        <Route path="/wizard" element={<WizardDetail />} />
       </Routes>
     </AnimatePresence>
   );
 };
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <AnimatedRoutes />
     </BrowserRouter>
   );
 }
-
-export default App;

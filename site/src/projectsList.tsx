@@ -64,7 +64,7 @@ const projectsArray = [
       <SiPython size={30} />,
       <SiJavascript size={30} />,
     ]}
-    onClickPage="wizard"
+    onClickPage="/wizard"
   />,
 ];
 

@@ -16,7 +16,6 @@ export default function Accordion({ accordionData }: AccordionProps) {
 
   const handleClick = (nextIndex: number) => {
     setExpandedIndex((current) => {
-      console.log(current);
       if (current === nextIndex) {
         return -1;
       } else {
@@ -36,7 +35,7 @@ export default function Accordion({ accordionData }: AccordionProps) {
         key={accordion.id}
         className="box has-text-weight-bold has-background-grey-light"
       >
-        <div className="columns">
+        <div className="columns is-mobile">
           <div className="column">{accordion.title}</div>
           <div className="column has-text-right">{icon}</div>
         </div>

@@ -37,15 +37,17 @@ export default function NavBar({
             returnToTopRef={returnToTopRef && returnToTopRef}
             homeButtonRedirect={homeButtonRedirect}
           />
-          <a
-            className="navbar-burger"
-            ref={burgerIconRef}
-            onClick={handleBurgerClick}
-          >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-          </a>
+          {contact && (
+            <a
+              className="navbar-burger"
+              ref={burgerIconRef}
+              onClick={handleBurgerClick}
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </a>
+          )}
         </div>
         <div
           className="navbar-menu is-shadowless has-background-grey-light"
