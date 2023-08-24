@@ -5,7 +5,7 @@ import { MutableRefObject } from "react";
 import { useNavigate } from "react-router-dom";
 
 type HomeSwirlProps = {
-  returnToTopRef: MutableRefObject<HTMLDivElement>;
+  returnToTopRef?: MutableRefObject<HTMLDivElement>;
   homeButtonRedirect?: boolean;
 };
 
@@ -21,7 +21,7 @@ export default function HomeSwirl({
       return;
     }
 
-    scrollToTop(returnToTopRef);
+    returnToTopRef && scrollToTop(returnToTopRef);
   };
 
   return (

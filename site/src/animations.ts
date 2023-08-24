@@ -20,6 +20,8 @@ export const letter = {
 };
 
 export const scrollToBottom = (e: MutableRefObject<HTMLDivElement>) => {
+  if (!e) return;
+
   e.current.scrollIntoView({
     behavior: "smooth",
   });

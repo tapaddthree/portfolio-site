@@ -26,7 +26,7 @@ export default function NavBar({
 
   const handleContactButtonClick = () => {
     handleBurgerClick();
-    scrollToBottom(contactRef);
+    contactRef && scrollToBottom(contactRef);
   };
 
   return (
@@ -34,7 +34,7 @@ export default function NavBar({
       <div className="container">
         <div className="navbar-brand">
           <HomeSwirl
-            returnToTopRef={returnToTopRef}
+            returnToTopRef={returnToTopRef && returnToTopRef}
             homeButtonRedirect={homeButtonRedirect}
           />
           <a
