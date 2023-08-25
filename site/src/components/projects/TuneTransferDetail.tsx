@@ -12,14 +12,10 @@ import {
 
 const tuneAccordion = [
   {
-    title: "Tune Transfer",
-    body: "I did accordion work",
+    title: "Inital add to website",
+    body: "This is me adding Tune Transfer to my site. When I make any future changes to Tune Transfer I will document them here.",
+    date: "08/25/2023",
     id: 1,
-  },
-  {
-    title: "What I did today, Aug. 25",
-    body: "I did accordion work",
-    id: 2,
   },
 ];
 

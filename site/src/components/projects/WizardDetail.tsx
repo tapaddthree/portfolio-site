@@ -15,12 +15,8 @@ const wizardAccordion = [
   {
     title: "Wealth Wizard",
     body: "I did accordion work",
+    date: "placeholder",
     id: 1,
-  },
-  {
-    title: "What I did today, Aug. 25",
-    body: "I did accordion work",
-    id: 2,
   },
 ];
 

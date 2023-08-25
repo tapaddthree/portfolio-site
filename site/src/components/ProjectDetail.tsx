@@ -12,6 +12,7 @@ interface Skills {
 interface AccordionData {
   title: string;
   body: string;
+  date: string;
   id: number;
 }
 

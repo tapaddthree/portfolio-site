@@ -13,12 +13,8 @@ const portfolioAccordion = [
   {
     title: "Tune Transfer",
     body: "I did accordion work",
+    date: "placeholder",
     id: 1,
-  },
-  {
-    title: "What I did today, Aug. 25",
-    body: "I did accordion work etc. etc. etc. etc. etc. etc.",
-    id: 2,
   },
 ];
 
@@ -36,7 +32,7 @@ export default function PortfolioDetail() {
       title="My Portfolio"
       skills={portfolioSkills}
       images={ppHome}
-      description="Portfolio Project Description"
+      description="One day I figured it was probably a good idea to create a website to show off my projects and skills publicly. Shortly after I began working on the website you are on right now and it looks pretty fantastic if I do say so myself. I am very proud of it. It also feels pretty cool to have my own name on the web."
       accordionData={portfolioAccordion}
       link="https://github.com/jako1001/portfolio-site"
       linkIcon={<SiGithub />}

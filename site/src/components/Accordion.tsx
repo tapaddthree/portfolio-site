@@ -5,6 +5,7 @@ interface AccordionItems {
   id: number;
   title: string;
   body: string;
+  date: string;
 }
 
 type AccordionProps = {
@@ -46,7 +47,10 @@ export default function Accordion({ accordionData }: AccordionProps) {
           <div className="column has-text-right">{icon}</div>
         </div>
         {isExpanded && (
-          <div className="has-text-weight-normal">{accordion.body}</div>
+          <div className="has-text-weight-normal">
+            <p className="has-text-weight-bold pb-2">{accordion.date}</p>
+            {accordion.body}
+          </div>
         )}
       </div>
     );
