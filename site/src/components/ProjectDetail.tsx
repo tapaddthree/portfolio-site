@@ -21,6 +21,8 @@ type ProjectDetailProps = {
   images: string;
   description: string;
   accordionData: AccordionData[];
+  link: string;
+  linkIcon: ReactNode;
 };
 
 export default function ProjectDetail({
@@ -29,6 +31,8 @@ export default function ProjectDetail({
   images,
   description,
   accordionData,
+  link,
+  linkIcon,
 }: ProjectDetailProps) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -54,8 +58,13 @@ export default function ProjectDetail({
       >
         <div className="container has-text-black has-background-primary">
           <div className="box has-background-primary">
-            <div className="title">{title}</div>
-            <div className="columns has-text-black is-multiline is-mobile">
+            <div className="title">
+              {title}
+              <a href={link} target="_blank" className="has-text-black">
+                <span className="pl-3">{linkIcon}</span>
+              </a>
+            </div>
+            <div className="columns has-text-black is-multiline is-mobile pt-2">
               {renderedSkills}
             </div>
             <div className="box has-background-grey-light has-text-centered">

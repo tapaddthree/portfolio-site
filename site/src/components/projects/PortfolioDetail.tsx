@@ -23,12 +23,11 @@ const portfolioAccordion = [
 ];
 
 const portfolioSkills = [
-  { icon: <SiGithub size={40} />, name: "Github" },
   { icon: <SiDocker size={40} />, name: "Docker" },
-  { icon: <SiTypescript size={40} />, name: "TypeScript" },
-  { icon: <SiReact size={40} />, name: "React" },
   { icon: <SiBulma size={40} />, name: "Bulma" },
   { icon: <SiVite size={40} />, name: "Vite" },
+  { icon: <SiReact size={40} />, name: "React" },
+  { icon: <SiTypescript size={40} />, name: "TypeScript" },
 ];
 
 export default function PortfolioDetail() {
@@ -39,6 +38,8 @@ export default function PortfolioDetail() {
       images={ppHome}
       description="Portfolio Project Description"
       accordionData={portfolioAccordion}
+      link="https://github.com/jako1001/portfolio-site"
+      linkIcon={<SiGithub />}
     />
   );
 }

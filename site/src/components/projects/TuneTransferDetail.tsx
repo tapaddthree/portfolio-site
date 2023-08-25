@@ -14,11 +14,20 @@ const tuneAccordion = [
   },
 ];
 
+// const tuneSkills = [
+//   { icon: <SiGithub size={40} />, name: "Github" },
+//   { icon: <SiDocker size={40} />, name: "Docker" },
+//   { icon: <SiTypescript size={40} />, name: "TypeScript" },
+//   { icon: <SiReact size={40} />, name: "React" },
+//   { icon: <SiBulma size={40} />, name: "Bulma" },
+//   { icon: <SiVite size={40} />, name: "Vite" },
+// ];
+
 export default function TuneTransferDetail() {
   return (
     <ProjectDetail
       title="Tune Transfer"
-      skills="Skills Placeholder"
+      skills={tuneSkills}
       images={ttHome}
       description="Tune Transfer Description"
       accordionData={tuneAccordion}

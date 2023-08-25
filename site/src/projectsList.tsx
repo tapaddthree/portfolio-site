@@ -39,7 +39,7 @@ const projectsArray = [
   <Card
     image={ppHome}
     title="My Portfolio"
-    body="This is the portfolio that you are currently looking at. Wow, that's a brain twister"
+    body="This is the portfolio that you are currently looking at"
     icons={[
       <SiGithub size={30} />,
       <SiDocker size={30} />,
