@@ -73,10 +73,18 @@ export default function ProjectDetail({
             <div className="box has-background-grey-light has-text-centered">
               <img src={images} className="is-mobile" />
             </div>
-            <div className="box has-background-grey-light">
+            <div className="box has-background-grey-light subt">
+              <p className="has-text-weight-bold is-size-4 pb-1">
+                Description
+              </p>
               {description}
             </div>
-            <Accordion accordionData={accordionData} />
+            <div className="box">
+              <p className="has-text-weight-bold is-size-4 pb-2">
+                Changelog
+              </p>
+              <Accordion accordionData={accordionData} />
+            </div>
           </div>
         </div>
       </motion.section>

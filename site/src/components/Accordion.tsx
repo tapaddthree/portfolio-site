@@ -52,5 +52,5 @@ export default function Accordion({ accordionData }: AccordionProps) {
     );
   });
 
-  return <div className="box">{renderedItems}</div>;
+  return <>{renderedItems}</>;
 }
