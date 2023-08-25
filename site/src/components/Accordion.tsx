@@ -34,6 +34,12 @@ export default function Accordion({ accordionData }: AccordionProps) {
         onClick={() => handleClick(index)}
         key={accordion.id}
         className="box has-text-weight-bold has-background-grey-light"
+        style={{
+          boxShadow: "3px 3px #444443",
+          borderStyle: "solid",
+          borderColor: "#444443",
+          borderWidth: "2px",
+        }}
       >
         <div className="columns is-mobile">
           <div className="column">{accordion.title}</div>

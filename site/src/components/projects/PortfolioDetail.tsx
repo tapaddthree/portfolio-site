@@ -17,7 +17,7 @@ const portfolioAccordion = [
   },
   {
     title: "What I did today, Aug. 25",
-    body: "I did accordion work",
+    body: "I did accordion work etc. etc. etc. etc. etc. etc.",
     id: 2,
   },
 ];

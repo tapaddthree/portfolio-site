@@ -58,14 +58,16 @@ export default function ProjectDetail({
       >
         <div className="container has-text-black has-background-primary">
           <div className="box has-background-primary">
-            <div className="title">
-              {title}
-              <a href={link} target="_blank" className="has-text-black">
-                <span className="pl-3">{linkIcon}</span>
-              </a>
-            </div>
-            <div className="columns has-text-black is-multiline is-mobile pt-2">
-              {renderedSkills}
+            <div className="box has-background-grey-light">
+              <div className="title">
+                {title}
+                <a href={link} target="_blank" className="has-text-black">
+                  <span className="pl-3">{linkIcon}</span>
+                </a>
+              </div>
+              <div className="columns has-text-black is-multiline is-mobile pt-2">
+                {renderedSkills}
+              </div>
             </div>
             <div className="box has-background-grey-light has-text-centered">
               <img src={images} className="is-mobile" />
