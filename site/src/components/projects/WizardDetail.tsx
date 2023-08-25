@@ -43,6 +43,8 @@ export default function WizardDetail() {
       images={wwHome}
       description="Wealth Wizard Description"
       accordionData={wizardAccordion}
+      link="https://gitlab.com/hrgroup4/wealth-wizard"
+      linkIcon={<SiGitlab />}
     />
   );
 }

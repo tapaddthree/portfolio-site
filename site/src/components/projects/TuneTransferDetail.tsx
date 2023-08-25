@@ -1,5 +1,14 @@
 import ProjectDetail from "../ProjectDetail";
 import ttHome from "../../media/tuneTransfer/ttHome.png";
+import {
+  SiGitlab,
+  SiPython,
+  SiReact,
+  SiFastapi,
+  SiSpotify,
+  SiYoutube,
+  SiJavascript,
+} from "react-icons/si";
 
 const tuneAccordion = [
   {
@@ -14,14 +23,15 @@ const tuneAccordion = [
   },
 ];
 
-// const tuneSkills = [
-//   { icon: <SiGithub size={40} />, name: "Github" },
-//   { icon: <SiDocker size={40} />, name: "Docker" },
-//   { icon: <SiTypescript size={40} />, name: "TypeScript" },
-//   { icon: <SiReact size={40} />, name: "React" },
-//   { icon: <SiBulma size={40} />, name: "Bulma" },
-//   { icon: <SiVite size={40} />, name: "Vite" },
-// ];
+const tuneSkills = [
+  { icon: <SiGitlab size={40} />, name: "Gitlab" },
+  { icon: <SiYoutube size={40} />, name: "YouTube" },
+  { icon: <SiSpotify size={40} />, name: "Spotify" },
+  { icon: <SiFastapi size={40} />, name: "Fastapi" },
+  { icon: <SiReact size={40} />, name: "React" },
+  { icon: <SiPython size={40} />, name: "Python" },
+  { icon: <SiJavascript size={40} />, name: "Javascript" },
+];
 
 export default function TuneTransferDetail() {
   return (
@@ -31,6 +41,8 @@ export default function TuneTransferDetail() {
       images={ttHome}
       description="Tune Transfer Description"
       accordionData={tuneAccordion}
+      link="https://gitlab.com/jako1001/tune-transfer"
+      linkIcon={<SiGitlab />}
     />
   );
 }
