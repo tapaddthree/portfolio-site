@@ -64,6 +64,7 @@ export default function ProjectDetail({
                 <a href={link} target="_blank" className="has-text-black">
                   <span className="pl-3">{linkIcon}</span>
                 </a>
+                <hr style={{ backgroundColor: "#444443" }} />
               </div>
               <div className="columns has-text-black is-multiline is-mobile pt-2">
                 {renderedSkills}
