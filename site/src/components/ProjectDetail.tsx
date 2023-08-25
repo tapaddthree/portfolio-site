@@ -4,9 +4,23 @@ import NavBar from "./NavBar";
 import Accordion from "./Accordion";
 import { ReactNode, useEffect } from "react";
 
+interface Skills {
+  icon: ReactNode;
+  name: string;
+}
+
+interface AccordionData {
+  title: string;
+  body: string;
+  id: number;
+}
+
 type ProjectDetailProps = {
   title: string;
-  skills: ReactNode[];
+  skills: Skills[];
+  images: string;
+  description: string;
+  accordionData: AccordionData[];
 };
 
 export default function ProjectDetail({
@@ -22,9 +36,9 @@ export default function ProjectDetail({
 
   const renderedSkills = skills.map((skill, index) => {
     return (
-      <span key={index} className="column is-narrow">
+      <div key={index} className="column is-narrow has-text-right">
         {skill && skill.icon}
-      </span>
+      </div>
     );
   });
 
@@ -38,18 +52,16 @@ export default function ProjectDetail({
         exit="exit"
         variants={pageFadeIn}
       >
-        <div className="container has-text-black">
+        <div className="container has-text-black has-background-primary">
           <div className="box has-background-primary">
-            <div className="columns has-text-black">
-              <div className="column">
-                <div className="title">{title}</div>
-              </div>
+            <div className="title">{title}</div>
+            <div className="columns has-text-black is-multiline is-mobile">
               {renderedSkills}
             </div>
             <div className="box has-background-grey-light has-text-centered">
               <img src={images} className="is-mobile" />
             </div>
-            <div className="box has-background-grey-light ">
+            <div className="box has-background-grey-light">
               {description}
             </div>
             <Accordion accordionData={accordionData} />
