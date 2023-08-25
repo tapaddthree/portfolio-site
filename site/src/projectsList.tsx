@@ -34,12 +34,12 @@ const projectsArray = [
       <SiPython size={30} />,
       <SiJavascript size={30} />,
     ]}
-    link="https://gitlab.com/jako1001/tune-transfer"
+    onClickPage="/tune"
   />,
   <Card
     image={ppHome}
     title="My Portfolio"
-    body="This is the portfolio that you are currently looking at. Wow, that's a brain twister"
+    body="This is the portfolio that you are currently looking at"
     icons={[
       <SiGithub size={30} />,
       <SiDocker size={30} />,
@@ -48,7 +48,7 @@ const projectsArray = [
       <SiReact size={30} />,
       <SiTypescript size={30} />,
     ]}
-    link="https://hrgroup4.gitlab.io/wealth-wizard/"
+    onClickPage="/portfolio"
   />,
   <Card
     image={wwHome}
@@ -64,7 +64,7 @@ const projectsArray = [
       <SiPython size={30} />,
       <SiJavascript size={30} />,
     ]}
-    link="https://hrgroup4.gitlab.io/wealth-wizard/"
+    onClickPage="/wizard"
   />,
 ];
 
