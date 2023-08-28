@@ -3,7 +3,7 @@ import { pageFadeIn } from "../animations";
 import NavBar from "./NavBar";
 import Accordion from "./Accordion";
 import { useEffect } from "react";
-import { ProjectDetailProps } from "../pages/ProjectPage";
+import { ProjectPageProps } from "../pages/ProjectPage";
 
 export default function ProjectDetail({
   title,
@@ -13,7 +13,7 @@ export default function ProjectDetail({
   linkIcon,
   accordionData,
   skills,
-}: ProjectDetailProps) {
+}: ProjectPageProps) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
