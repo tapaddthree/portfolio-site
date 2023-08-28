@@ -2,13 +2,13 @@ import { useState } from "react";
 import { FaChevronLeft, FaChevronDown } from "react-icons/fa";
 import ReactEmbedGist from "react-embed-gist";
 
-interface AccordionItems {
+type AccordionItems = {
   id: number;
   title: string;
   body: string;
   gistId?: `${string}/${string}`;
   img?: string;
-}
+};
 
 type AccordionProps = {
   accordionData: AccordionItems[];

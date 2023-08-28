@@ -2,39 +2,17 @@ import { motion } from "framer-motion";
 import { pageFadeIn } from "../animations";
 import NavBar from "./NavBar";
 import Accordion from "./Accordion";
-import { ReactNode, useEffect } from "react";
-
-interface Skills {
-  icon: ReactNode;
-  name: string;
-}
-
-interface AccordionData {
-  title: string;
-  body: string;
-  gistId?: `${string}/${string}`;
-  img?: string;
-  id: number;
-}
-
-type ProjectDetailProps = {
-  title: string;
-  skills: Skills[];
-  images: string;
-  description: string;
-  accordionData: AccordionData[];
-  link: string;
-  linkIcon: ReactNode;
-};
+import { useEffect } from "react";
+import { ProjectDetailProps } from "../pages/ProjectPage";
 
 export default function ProjectDetail({
   title,
-  skills,
   images,
   description,
-  accordionData,
   link,
   linkIcon,
+  accordionData,
+  skills,
 }: ProjectDetailProps) {
   useEffect(() => {
     window.scrollTo(0, 0);
