@@ -13,6 +13,7 @@ interface AccordionData {
   title: string;
   body: string;
   gistId?: `${string}/${string}`;
+  img?: string;
   id: number;
 }
 
@@ -79,9 +80,9 @@ export default function ProjectDetail({
             </p>
             {description}
           </div>
-          <div className="box">
+          <div className="box has-background-grey-light">
             <p className="has-text-weight-bold is-size-4 pb-2">
-              Changelog
+              What's in this app?
             </p>
             <Accordion accordionData={accordionData} />
           </div>

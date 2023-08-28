@@ -7,6 +7,7 @@ interface AccordionItems {
   title: string;
   body: string;
   gistId?: `${string}/${string}`;
+  img?: string;
 }
 
 type AccordionProps = {
@@ -35,7 +36,7 @@ export default function Accordion({ accordionData }: AccordionProps) {
       <div
         onClick={() => handleClick(index)}
         key={accordion.id}
-        className="box has-text-weight-bold has-background-grey-light"
+        className="box has-text-weight-bold"
         style={{
           boxShadow: "3px 3px #444443",
           borderStyle: "solid",
@@ -55,6 +56,7 @@ export default function Accordion({ accordionData }: AccordionProps) {
                 <ReactEmbedGist gist={accordion.gistId} />
               </div>
             )}
+            {accordion.img && <img src={accordion.img} className="pt-3" />}
           </div>
         )}
       </div>
