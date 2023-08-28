@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronDown } from "react-icons/fa";
+import ReactEmbedGist from "react-embed-gist";
 
 interface AccordionItems {
   id: number;
   title: string;
   body: string;
-  date: string;
+  gistId?: `${string}/${string}`;
 }
 
 type AccordionProps = {
@@ -48,8 +49,12 @@ export default function Accordion({ accordionData }: AccordionProps) {
         </div>
         {isExpanded && (
           <div className="has-text-weight-normal">
-            <p className="has-text-weight-bold pb-2">{accordion.date}</p>
             {accordion.body}
+            {accordion.gistId && (
+              <div className="content pt-2">
+                <ReactEmbedGist gist={accordion.gistId} />
+              </div>
+            )}
           </div>
         )}
       </div>

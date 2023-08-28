@@ -12,7 +12,7 @@ interface Skills {
 interface AccordionData {
   title: string;
   body: string;
-  date: string;
+  gistId?: `${string}/${string}`;
   id: number;
 }
 
@@ -51,41 +51,39 @@ export default function ProjectDetail({
     <>
       <NavBar contact={false} homeButtonRedirect={true} />
       <motion.section
-        className="section"
+        className="section has-background-primary"
         initial="initial"
         animate="animate"
         exit="exit"
         variants={pageFadeIn}
       >
-        <div className="container has-text-black has-background-primary">
-          <div className="box has-background-primary">
-            <div className="box has-background-grey-light">
-              <div className="title">
-                {title}
-                <a href={link} target="_blank" className="has-text-black">
-                  <span className="pl-3">{linkIcon}</span>
-                </a>
-                <hr style={{ backgroundColor: "#444443" }} />
-              </div>
-              <div className="columns has-text-black is-multiline is-mobile pt-2">
-                {renderedSkills}
-              </div>
+        <div className="container has-text-black">
+          <div className="box has-background-grey-light">
+            <div className="title">
+              {title}
+              <a href={link} target="_blank" className="has-text-black">
+                <span className="pl-3">{linkIcon}</span>
+              </a>
+              <hr style={{ backgroundColor: "#444443" }} />
             </div>
-            <div className="box has-background-grey-light has-text-centered">
-              <img src={images} className="is-mobile" />
+            <div className="columns has-text-black is-multiline is-mobile pt-2">
+              {renderedSkills}
             </div>
-            <div className="box has-background-grey-light subt">
-              <p className="has-text-weight-bold is-size-4 pb-1">
-                Description
-              </p>
-              {description}
-            </div>
-            <div className="box">
-              <p className="has-text-weight-bold is-size-4 pb-2">
-                Changelog
-              </p>
-              <Accordion accordionData={accordionData} />
-            </div>
+          </div>
+          <div className="box has-background-grey-light has-text-centered">
+            <img src={images} className="is-mobile" />
+          </div>
+          <div className="box has-background-grey-light subt">
+            <p className="has-text-weight-bold is-size-4 pb-1">
+              Description
+            </p>
+            {description}
+          </div>
+          <div className="box">
+            <p className="has-text-weight-bold is-size-4 pb-2">
+              Changelog
+            </p>
+            <Accordion accordionData={accordionData} />
           </div>
         </div>
       </motion.section>

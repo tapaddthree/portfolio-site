@@ -12,7 +12,7 @@ import {
 
 const tuneAccordion = [
   {
-    title: "Inital add to website",
+    title: "Initial add to website",
     body: "This is me adding Tune Transfer to my site. When I make any future changes to Tune Transfer I will document them here.",
     date: "08/25/2023",
     id: 1,
