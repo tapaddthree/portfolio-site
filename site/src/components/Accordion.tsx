@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronDown } from "react-icons/fa";
+import ReactEmbedGist from "react-embed-gist";
 
-interface AccordionItems {
+type AccordionItems = {
   id: number;
   title: string;
   body: string;
-}
+  gistId?: `${string}/${string}`;
+  img?: string;
+};
 
 type AccordionProps = {
   accordionData: AccordionItems[];
@@ -33,7 +36,7 @@ export default function Accordion({ accordionData }: AccordionProps) {
       <div
         onClick={() => handleClick(index)}
         key={accordion.id}
-        className="box has-text-weight-bold has-background-grey-light"
+        className="box has-text-weight-bold"
         style={{
           boxShadow: "3px 3px #444443",
           borderStyle: "solid",
@@ -46,11 +49,19 @@ export default function Accordion({ accordionData }: AccordionProps) {
           <div className="column has-text-right">{icon}</div>
         </div>
         {isExpanded && (
-          <div className="has-text-weight-normal">{accordion.body}</div>
+          <div className="has-text-weight-normal">
+            {accordion.body}
+            {accordion.gistId && (
+              <div className="content pt-2">
+                <ReactEmbedGist gist={accordion.gistId} />
+              </div>
+            )}
+            {accordion.img && <img src={accordion.img} className="pt-3" />}
+          </div>
         )}
       </div>
     );
   });
 
-  return <div className="box">{renderedItems}</div>;
+  return <>{renderedItems}</>;
 }
