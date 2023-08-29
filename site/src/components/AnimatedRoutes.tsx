@@ -62,7 +62,7 @@ export default function AnimatedRoutes() {
           path="/wizard"
           element={
             <ProjectPage
-              title="Wealth Wizard"
+              title="Wealth Wizard (Live site being fixed)"
               skills={wizardSkills}
               images={wizardImages}
               description={wizardDescription}
