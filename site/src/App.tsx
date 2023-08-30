@@ -1,11 +1,10 @@
-import MainPage from "./pages/MainPage";
+import { BrowserRouter } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <MainPage />
-    </>
+    <BrowserRouter>
+      <AnimatedRoutes />
+    </BrowserRouter>
   );
 }
-
-export default App;

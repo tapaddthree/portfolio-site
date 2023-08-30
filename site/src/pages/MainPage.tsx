@@ -1,4 +1,6 @@
 import { MutableRefObject, useRef } from "react";
+import { motion } from "framer-motion";
+import { pageFadeIn } from "../animations";
 import NavBar from "../components/NavBar";
 import Intro from "../components/Intro";
 import Description from "../components/Description";
@@ -14,14 +16,25 @@ export default function MainPage() {
   return (
     <>
       <div ref={returnToTopRef} style={{ scrollMarginTop: "60px" }} />
-      <NavBar contactRef={contactRef} returnToTopRef={returnToTopRef} />
-      <Intro />
-      <Description />
-      <Skills />
-      <Projects />
-      <div ref={contactRef} style={{ scrollMarginTop: "70px" }} />
-      <FooterFormSection />
-      <FooterOutro returnToTopRef={returnToTopRef} />
+      <NavBar
+        contactRef={contactRef}
+        returnToTopRef={returnToTopRef}
+        contact={true}
+      />
+      <motion.div
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={pageFadeIn}
+      >
+        <Intro />
+        <Description />
+        <Skills />
+        <Projects />
+        <div ref={contactRef} style={{ scrollMarginTop: "70px" }} />
+        <FooterFormSection />
+        <FooterOutro returnToTopRef={returnToTopRef} />
+      </motion.div>
     </>
   );
 }
