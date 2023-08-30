@@ -2,6 +2,7 @@ import { MutableRefObject, useRef } from "react";
 import { motion } from "framer-motion";
 import { scrollToBottom } from "../animations";
 import HomeSwirl from "./HomeSwirl";
+import resume from "../media/resume.pdf";
 
 type NavBarProps = {
   contactRef?: MutableRefObject<HTMLDivElement>;
@@ -57,9 +58,23 @@ export default function NavBar({
             <div className="navbar-end">
               <div className="navbar-item">
                 <div className="buttons is-centered is-shadowless">
+                  <a
+                    href={resume}
+                    download="Jakob Schweter Resume"
+                    target="_blank"
+                  >
+                    <motion.button
+                      onClick={handleBurgerClick}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="button is-black is-outlined is-rounded has-text-weight-medium"
+                    >
+                      My Resume
+                    </motion.button>
+                  </a>
                   <motion.button
                     onClick={handleContactButtonClick}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.9 }}
                     className="button is-black is-outlined is-rounded has-text-weight-medium"
                   >

@@ -22,6 +22,7 @@ export default function ContactForm() {
       text: "Please try again later.",
     });
   }
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="columns is-centered">
