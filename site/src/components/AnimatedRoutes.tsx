@@ -72,7 +72,7 @@ export default function AnimatedRoutes() {
             />
           }
         />
-        <Route path="*" element={<MainPage />} />
+        <Route path="/*" element={<MainPage />} />
       </Routes>
     </AnimatePresence>
   );
