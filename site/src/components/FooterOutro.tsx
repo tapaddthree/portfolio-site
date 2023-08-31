@@ -17,7 +17,12 @@ export default function FooterOutro({ returnToTopRef }: FooterOutroProps) {
 
   const renderedIcons = icons.map((i, index) => {
     return (
-      <a href={i.link} key={index} className="has-text-black">
+      <a
+        href={i.link}
+        key={index}
+        target="_blank"
+        className="has-text-black"
+      >
         <motion.div
           whileHover={{ scale: 1.5 }}
           whileTap={{ scale: 0.5 }}
