@@ -9,8 +9,8 @@ export default function ProjectDetail({
   title,
   images,
   description,
-  link,
-  linkIcon,
+  repo,
+  liveLink,
   accordionData,
   skills,
 }: ProjectPageProps) {
@@ -38,16 +38,24 @@ export default function ProjectDetail({
       >
         <div className="container has-text-black">
           <div className="box has-background-grey-light">
-            <div className="title">
-              {title}
-              <a href={link} target="_blank" className="has-text-black">
-                <span className="pl-3">{linkIcon}</span>
-              </a>
-              <hr style={{ backgroundColor: "#444443" }} />
-            </div>
-            <div className="columns has-text-black is-multiline is-mobile pt-2">
+            <div className="title">{title}</div>
+            <div className="columns has-text-black is-multiline is-mobile pt-4">
               {renderedSkills}
             </div>
+          </div>
+          <div className="box has-background-grey-light">
+            <a href={repo} target="_blank" className="has-text-black">
+              <span>View repository </span>
+            </a>
+            {liveLink && (
+              <a
+                href={liveLink}
+                target="_blank"
+                className="has-text-black"
+              >
+                <span>| View live</span>
+              </a>
+            )}
           </div>
           <div className="box has-background-grey-light has-text-centered">
             <img src={images} className="is-mobile" />

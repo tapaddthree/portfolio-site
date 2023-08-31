@@ -6,21 +6,18 @@ import {
   portfolioAccordion,
   portfolioSkills,
   portfolioDescription,
-  portfolioIcon,
   portfolioImages,
-  portfolioLink,
+  portfolioRepo,
   tuneAccordion,
   tuneSkills,
   tuneImages,
   tuneDescription,
-  tuneIcon,
-  tuneLink,
+  tuneRepo,
   wizardAccordion,
   wizardSkills,
   wizardDescription,
   wizardImages,
-  wizardLink,
-  wizardIcon,
+  wizardRepo,
 } from "../projectPageDetail";
 
 export default function AnimatedRoutes() {
@@ -39,8 +36,7 @@ export default function AnimatedRoutes() {
               images={tuneImages}
               description={tuneDescription}
               accordionData={tuneAccordion}
-              link={tuneLink}
-              linkIcon={tuneIcon}
+              repo={tuneRepo}
             />
           }
         />
@@ -53,8 +49,8 @@ export default function AnimatedRoutes() {
               images={portfolioImages}
               description={portfolioDescription}
               accordionData={portfolioAccordion}
-              link={portfolioLink}
-              linkIcon={portfolioIcon}
+              repo={portfolioRepo}
+              liveLink="https://www.jakobschweter.com"
             />
           }
         />
@@ -67,8 +63,7 @@ export default function AnimatedRoutes() {
               images={wizardImages}
               description={wizardDescription}
               accordionData={wizardAccordion}
-              link={wizardLink}
-              linkIcon={wizardIcon}
+              repo={wizardRepo}
             />
           }
         />

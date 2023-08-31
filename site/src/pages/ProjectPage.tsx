@@ -20,16 +20,16 @@ export type ProjectPageProps = {
   images: string;
   description: string;
   accordionData: AccordionData[];
-  link: string;
-  linkIcon: ReactNode;
+  repo: string;
+  liveLink?: string;
 };
 
 export default function ProjectPage({
   title,
   images,
   description,
-  link,
-  linkIcon,
+  repo,
+  liveLink,
   accordionData,
   skills,
 }: ProjectPageProps) {
@@ -38,8 +38,8 @@ export default function ProjectPage({
       title={title}
       images={images}
       description={description}
-      link={link}
-      linkIcon={linkIcon}
+      repo={repo}
+      liveLink={liveLink}
       accordionData={accordionData}
       skills={skills}
     />

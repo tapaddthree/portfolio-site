@@ -65,8 +65,8 @@ export const portfolioSkills = [
 export const portfolioImages = ppHome;
 export const portfolioDescription =
   "One day I figured it was probably a good idea to create a website to show off my projects and skills publicly. Shortly after I began working on the website you are on right now and I am very proud of it. It also feels pretty cool to have my own name on the web.";
-export const portfolioLink = "https://github.com/jako1001/portfolio-site";
-export const portfolioIcon = <SiGithub />;
+export const portfolioRepo = "https://github.com/jako1001/portfolio-site";
+export const portfolioIcon = <SiGithub size={30} />;
 
 // tune transfer data //
 export const tuneAccordion: AccordionData[] = [
@@ -120,8 +120,8 @@ export const tuneSkills = [
 export const tuneImages = ttHome;
 export const tuneDescription =
   "What do you do when you switch music streaming services? Spend a few days manually transferring over each and every one of your playlists? Absolutely not! You spend a few weeks creating an application that does it for you! At least those were the thoughts that were going through my head when I created my first post-graduation project: Tune Transfer. Tune Transfer does exactly what it sounds like it does, transfers your tunes. Tune Transfer currently supports converting Spotify playlists to YouTube music playlists, although I plan to add more in future. If you need to to transfer your playlists, look no further!";
-export const tuneLink = "https://gitlab.com/jako1001/tune-transfer";
-export const tuneIcon = <SiGitlab />;
+export const tuneRepo = "https://gitlab.com/jako1001/tune-transfer";
+export const tuneIcon = <SiGitlab size={20} />;
 
 // wealth wizard data //
 export const wizardAccordion: AccordionData[] = [
@@ -146,5 +146,5 @@ export const wizardSkills = [
 export const wizardImages = wwHome;
 export const wizardDescription =
   "(LIVE SITE CURRENTLY BEING FIXED, GITLAB REPOSITORY IS STILL AVAILABLE) Wealth Wizard is the cultivation of 4 group members in the final module of the Hack Reactor bootcamp. It is a real-time stock market portfolio simulation tool that allows you to sign up, buy, sell, and view real statistics of stocks, but with fictional money.";
-export const wizardLink = "https://gitlab.com/hrgroup4/wealth-wizard";
-export const wizardIcon = <SiGitlab />;
+export const wizardRepo = "https://gitlab.com/hrgroup4/wealth-wizard";
+export const wizardIcon = <SiGitlab size={20} />;
