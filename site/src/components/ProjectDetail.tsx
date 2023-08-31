@@ -66,12 +66,14 @@ export default function ProjectDetail({
             </p>
             {description}
           </div>
-          <div className="box has-background-grey-light">
-            <p className="has-text-weight-bold is-size-4 pb-2">
-              What's in this app?
-            </p>
-            <Accordion accordionData={accordionData} />
-          </div>
+          {accordionData && (
+            <div className="box has-background-grey-light">
+              <p className="has-text-weight-bold is-size-4 pb-2">
+                What's in this app?
+              </p>
+              <Accordion accordionData={accordionData} />
+            </div>
+          )}
         </div>
       </motion.section>
     </>

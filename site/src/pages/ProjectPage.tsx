@@ -19,7 +19,7 @@ export type ProjectPageProps = {
   skills: Skills[];
   images: string;
   description: string;
-  accordionData: AccordionData[];
+  accordionData?: AccordionData[];
   repo: string;
   liveLink?: string;
 };

@@ -90,7 +90,7 @@ export const tuneAccordion: AccordionData[] = [
   },
   {
     title: "YTC: Refining Artists",
-    body: 'In the event that the artists from the previous service do not match the artists from the YouTube search results, the "refine_artists" method will have you covered! Lines 3-12 are setting up shorthands for info that I will need later on in the function. On line 14, there is a while loop that checks to see if the artist from the from_service playlist, "playlist_from_front_artist" is not found in the YouTube artist "yt_artist." If it is not, perform a second search with the alternate artist data "playlist_from_front_alternate_artist," and then compare the two. If there is not a match again, remove the song and add it to the "removed_tracks" list (line 30), add a "skip" key to the given track, then continue.',
+    body: 'In the event that the artists from the previous service do not match the artists from the YouTube search results, the "refine_artists" method will have you covered! Lines 3-12 are setting up shorthands for info that I will need later on in the function. On line 14, there is a while loop that checks to see if the artist from the from_service playlist, "playlist_from_front_artist" is not found in the YouTube artist "yt_artist." If it is not, perform a second search with the alternate artist data and then compare the two. If there is not a match again, remove the song and add it to the "removed_tracks" list (line 30), add a "skip" key to the given track, then continue.',
     gistId: `${"jako1001"}/${"24a8c1adfc256ee05b8fe979ad492dcf"}`,
     id: 4,
   },
@@ -145,6 +145,6 @@ export const wizardSkills = [
 
 export const wizardImages = wwHome;
 export const wizardDescription =
-  "(LIVE SITE CURRENTLY BEING FIXED, GITLAB REPOSITORY IS STILL AVAILABLE) Wealth Wizard is the cultivation of 4 group members in the final module of the Hack Reactor bootcamp. It is a real-time stock market portfolio simulation tool that allows you to sign up, buy, sell, and view real statistics of stocks, but with fictional money.";
+  "Wealth Wizard is the cultivation of 4 group members in the final module of the Hack Reactor bootcamp. It is a real-time stock market portfolio simulation tool that allows you to sign up, buy, sell, and view real statistics of stocks, but with fictional money.";
 export const wizardRepo = "https://gitlab.com/hrgroup4/wealth-wizard";
 export const wizardIcon = <SiGitlab size={20} />;

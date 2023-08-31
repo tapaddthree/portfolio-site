@@ -13,7 +13,6 @@ import {
   tuneImages,
   tuneDescription,
   tuneRepo,
-  wizardAccordion,
   wizardSkills,
   wizardDescription,
   wizardImages,
@@ -58,11 +57,10 @@ export default function AnimatedRoutes() {
           path="/wizard"
           element={
             <ProjectPage
-              title="Wealth Wizard (Live site being fixed)"
+              title="Wealth Wizard"
               skills={wizardSkills}
               images={wizardImages}
               description={wizardDescription}
-              accordionData={wizardAccordion}
               repo={wizardRepo}
             />
           }
