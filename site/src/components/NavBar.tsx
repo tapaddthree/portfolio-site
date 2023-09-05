@@ -2,7 +2,7 @@ import { MutableRefObject, useRef } from "react";
 import { motion } from "framer-motion";
 import { scrollToBottom } from "../animations";
 import HomeSwirl from "./HomeSwirl";
-import resume from "../media/resume.pdf";
+import resume from "../media/Jakob Schweter Resume.pdf";
 
 type NavBarProps = {
   contactRef?: MutableRefObject<HTMLDivElement>;
