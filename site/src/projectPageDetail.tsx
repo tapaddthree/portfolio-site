@@ -133,7 +133,6 @@ export const wizardAccordion: AccordionData[] = [
 ];
 
 export const wizardSkills = [
-  { icon: <SiGitlab size={40} />, name: "Gitlab" },
   { icon: <SiDocker size={40} />, name: "Docker" },
   { icon: <SiMongodb size={40} />, name: "MongoDB" },
   { icon: <SiFastapi size={40} />, name: "FastAPI" },
