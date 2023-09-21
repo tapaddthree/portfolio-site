@@ -18,7 +18,6 @@ import {
   wizardImages,
   wizardRepo,
   etlSkills,
-  etlImages,
   etlDescription,
   etlRepo,
 } from "../projectPageDetail";
