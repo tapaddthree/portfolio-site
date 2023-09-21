@@ -13,6 +13,7 @@ import {
   SiJavascript,
   SiMongodb,
   SiRedux,
+  SiMysql,
 } from "react-icons/si";
 import animations from "./media/animations.gif";
 import ttHome from "./media/tuneTransfer/ttHome.png";
@@ -147,3 +148,16 @@ export const wizardDescription =
   "Wealth Wizard is the cultivation of 4 group members in the final module of the Hack Reactor bootcamp. It is a real-time stock market portfolio simulation tool that allows you to sign up, buy, sell, and view real statistics of stocks, but with fictional money.";
 export const wizardRepo = "https://gitlab.com/hrgroup4/wealth-wizard";
 export const wizardIcon = <SiGitlab size={20} />;
+
+// etl pipeline data //
+export const etlSkills = [
+  { icon: <SiMysql size={40} />, name: "MySQL" },
+  { icon: <SiDocker size={40} />, name: "Docker" },
+  { icon: <SiPython size={40} />, name: "Python" },
+];
+
+export const etlImages = ttHome;
+export const etlDescription =
+  "This project is a simple script that automates the Extract, Transform, Load (ETL) proccess. This script can read user data from strucutured .CSV files with headers and unstructured .txt files that contain phone numbers and emails. Once the data has been read it will be transformed into a DataFrame and inserted into a MySQL database automatically.";
+export const etlRepo = "https://github.com/jako1001/etl-pipeline-project";
+export const etlIcon = <SiGithub size={20} />;

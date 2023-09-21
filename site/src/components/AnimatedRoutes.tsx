@@ -17,6 +17,10 @@ import {
   wizardDescription,
   wizardImages,
   wizardRepo,
+  etlSkills,
+  etlImages,
+  etlDescription,
+  etlRepo,
 } from "../projectPageDetail";
 
 export default function AnimatedRoutes() {
@@ -26,6 +30,17 @@ export default function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<MainPage />} />
+        <Route
+          path="/etl"
+          element={
+            <ProjectPage
+              title="ETL Pipeline Automation"
+              skills={etlSkills}
+              description={etlDescription}
+              repo={etlRepo}
+            />
+          }
+        />
         <Route
           path="/tune"
           element={

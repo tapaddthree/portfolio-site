@@ -48,22 +48,18 @@ export default function ProjectDetail({
               <span>View repository </span>
             </a>
             {liveLink && (
-              <a
-                href={liveLink}
-                target="_blank"
-                className="has-text-black"
-              >
+              <a href={liveLink} target="_blank" className="has-text-black">
                 <span>| View live</span>
               </a>
             )}
           </div>
-          <div className="box has-background-grey-light has-text-centered">
-            <img src={images} className="is-mobile" />
-          </div>
+          {images && (
+            <div className="box has-background-grey-light has-text-centered">
+              <img src={images} className="is-mobile" />
+            </div>
+          )}
           <div className="box has-background-grey-light subt">
-            <p className="has-text-weight-bold is-size-4 pb-1">
-              Description
-            </p>
+            <p className="has-text-weight-bold is-size-4 pb-1">Description</p>
             {description}
           </div>
           {accordionData && (

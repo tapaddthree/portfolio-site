@@ -17,7 +17,7 @@ type Skills = {
 export type ProjectPageProps = {
   title: string;
   skills: Skills[];
-  images: string;
+  images?: string;
   description: string;
   accordionData?: AccordionData[];
   repo: string;
