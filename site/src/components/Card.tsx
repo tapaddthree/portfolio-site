@@ -41,7 +41,7 @@ export default function Card({
             </figure>
           </div>
           <div className="card-content">
-            <div className="media">
+            <div className="media-content has-text-left mb-3">
               <div className="media-left">
                 <p className="title is-4">{title}</p>
               </div>

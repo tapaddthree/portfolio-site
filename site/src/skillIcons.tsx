@@ -14,6 +14,7 @@ import {
   SiVite,
   SiBulma,
   SiDocker,
+  SiMysql,
 } from "react-icons/si";
 
 export const skills = [
@@ -27,6 +28,7 @@ export const skills = [
   { icon: <SiDocker size={80} />, name: "Docker" },
   { icon: <SiDjango size={80} />, name: "Django" },
   { icon: <SiMongodb size={80} />, name: "MongoDB" },
+  { icon: <SiMysql size={80} />, name: "MySQL" },
   { icon: <SiRedux size={80} />, name: "Redux" },
   { icon: <SiGithub size={80} />, name: "Github" },
   { icon: <SiGitlab size={80} />, name: "Gitlab" },

@@ -13,14 +13,28 @@ import {
   SiVite,
   SiGithub,
   SiGitlab,
+  SiMysql,
 } from "react-icons/si";
 import Card from "./components/Card";
 import wwHome from "./media/wealthWizard/wwHome.png";
 import ttHome from "./media/tuneTransfer/ttHome.png";
 import ppHome from "./media/portfolio/ppHome.png";
+import etl from "./media/etl/etl.jpg";
 import { motion } from "framer-motion";
 
 const projectsArray = [
+  <Card
+    image={etl}
+    title="ETL Pipeline Automation"
+    body="This project is a script that automates the Extract, Transform, Load (ETL) process"
+    icons={[
+      <SiGithub size={30} />,
+      <SiMysql size={30} />,
+      <SiDocker size={30} />,
+      <SiPython size={30} />,
+    ]}
+    onClickPage="/etl"
+  />,
   <Card
     image={ttHome}
     title="Tune Transfer"
@@ -75,7 +89,7 @@ export const projects = projectsArray.map((project, index) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
-      className="column"
+      className="column is-one-third"
     >
       {project}
     </motion.div>
