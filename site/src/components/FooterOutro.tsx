@@ -1,7 +1,7 @@
 import logo from "../media/homeSwirl.png";
 import { motion } from "framer-motion";
 import { CgCopyright } from "react-icons/cg";
-import { SiGithub, SiGitlab } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 import { scrollToTop } from "../animations";
 import { MutableRefObject } from "react";
 
@@ -11,8 +11,7 @@ type FooterOutroProps = {
 
 export default function FooterOutro({ returnToTopRef }: FooterOutroProps) {
   const icons = [
-    { icon: <SiGithub size={25} />, link: "https://github.com/jako1001" },
-    { icon: <SiGitlab size={25} />, link: "https://gitlab.com/jako1001" },
+    { icon: <SiGithub size={25} />, link: "https://github.com/tapaddthree" },
   ];
 
   const renderedIcons = icons.map((i, index) => {
@@ -58,7 +57,7 @@ export default function FooterOutro({ returnToTopRef }: FooterOutroProps) {
             {renderedIcons}
           </div>
           <h1 className="is-size-6 has-text-weight-semibold pt-2 has-text-black">
-            Jakob Schweter <CgCopyright /> 2023
+            Jakob Schweter <CgCopyright /> 2025
           </h1>
         </div>
       </div>
