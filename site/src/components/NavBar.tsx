@@ -27,7 +27,9 @@ export default function NavBar({
 
   const handleContactButtonClick = () => {
     handleBurgerClick();
-    contactRef && scrollToBottom(contactRef);
+    if (contactRef) {
+      scrollToBottom(contactRef);
+    }
   };
 
   return (

@@ -3,9 +3,24 @@ import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactForm() {
-  const [state, handleSubmit] = useForm(
-    import.meta.env.VITE_FORMSPREE_FORM_ID
-  );
+  const formId = import.meta.env.VITE_FORMSPREE_FORM_ID as string | undefined;
+
+  // If the form id is missing, avoid calling useForm (which throws) and
+  // render a non-fatal message so the app keeps running in dev/preview.
+  if (!formId) {
+    return (
+      <div className="notification is-warning">
+        <p className="has-text-weight-semibold">Contact form not configured</p>
+        <p>
+          The contact form is disabled because the Formspree form ID is missing.
+          Set <code>VITE_FORMSPREE_FORM_ID</code> in your environment to enable
+          the form (for local development, add it to a <code>.env</code> file).
+        </p>
+      </div>
+    );
+  }
+
+  const [state, handleSubmit] = useForm(formId);
   if (state.succeeded) {
     Swal.fire({
       icon: "success",

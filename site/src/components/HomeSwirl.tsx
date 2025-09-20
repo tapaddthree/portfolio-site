@@ -21,7 +21,9 @@ export default function HomeSwirl({
       return;
     }
 
-    returnToTopRef && scrollToTop(returnToTopRef);
+    if (returnToTopRef) {
+      scrollToTop(returnToTopRef);
+    }
   };
 
   return (
