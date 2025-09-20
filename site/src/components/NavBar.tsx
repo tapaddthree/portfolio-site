@@ -1,12 +1,12 @@
-import { MutableRefObject, useRef } from "react";
+import { RefObject, useRef } from "react";
 import { motion } from "framer-motion";
 import { scrollToBottom } from "../animations";
 import HomeSwirl from "./HomeSwirl";
 import resume from "../media/Jakob Schweter Resume.pdf";
 
 type NavBarProps = {
-  contactRef?: MutableRefObject<HTMLDivElement>;
-  returnToTopRef?: MutableRefObject<HTMLDivElement>;
+  contactRef?: RefObject<HTMLDivElement | null>;
+  returnToTopRef?: RefObject<HTMLDivElement | null>;
   contact?: boolean;
   homeButtonRedirect?: boolean;
 };
@@ -17,12 +17,12 @@ export default function NavBar({
   contact,
   homeButtonRedirect,
 }: NavBarProps) {
-  const burgerIconRef = useRef() as MutableRefObject<HTMLAnchorElement>;
-  const navBarMenuRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const burgerIconRef = useRef<HTMLAnchorElement | null>(null);
+  const navBarMenuRef = useRef<HTMLDivElement | null>(null);
 
   const handleBurgerClick = () => {
-    burgerIconRef.current.classList.toggle("is-active");
-    navBarMenuRef.current.classList.toggle("is-active");
+    burgerIconRef.current?.classList.toggle("is-active");
+    navBarMenuRef.current?.classList.toggle("is-active");
   };
 
   const handleContactButtonClick = () => {

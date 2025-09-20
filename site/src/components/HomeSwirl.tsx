@@ -1,11 +1,11 @@
 import { scrollToTop } from "../animations";
 import Spin from "./Spin";
 import logo from "../media/homeSwirl.png";
-import { MutableRefObject } from "react";
+import { RefObject } from "react";
 import { useNavigate } from "react-router-dom";
 
 type HomeSwirlProps = {
-  returnToTopRef?: MutableRefObject<HTMLDivElement>;
+  returnToTopRef?: RefObject<HTMLDivElement | null>;
   homeButtonRedirect?: boolean;
 };
 

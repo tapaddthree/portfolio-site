@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { CgCopyright } from "react-icons/cg";
 import { SiGithub } from "react-icons/si";
 import { scrollToTop } from "../animations";
-import { MutableRefObject } from "react";
+import { RefObject } from "react";
 
 type FooterOutroProps = {
-  returnToTopRef: MutableRefObject<HTMLDivElement>;
+  returnToTopRef: RefObject<HTMLDivElement | null>;
 };
 
 export default function FooterOutro({ returnToTopRef }: FooterOutroProps) {

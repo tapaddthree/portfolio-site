@@ -1,4 +1,4 @@
-import { MutableRefObject } from "react";
+import { RefObject } from "react";
 
 export const sentence = {
   hidden: { opacity: 1 },
@@ -19,16 +19,16 @@ export const letter = {
   },
 };
 
-export const scrollToBottom = (e: MutableRefObject<HTMLDivElement>) => {
-  if (!e) return;
+export const scrollToBottom = (e: RefObject<HTMLDivElement | null> | undefined) => {
+  if (!e || !e.current) return;
 
   e.current.scrollIntoView({
     behavior: "smooth",
   });
 };
 
-export const scrollToTop = (e: MutableRefObject<HTMLDivElement>) => {
-  if (!e) return;
+export const scrollToTop = (e: RefObject<HTMLDivElement | null> | undefined) => {
+  if (!e || !e.current) return;
 
   e.current.scrollIntoView({
     behavior: "smooth",

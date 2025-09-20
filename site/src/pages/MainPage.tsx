@@ -1,4 +1,4 @@
-import { MutableRefObject, useRef } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { pageFadeIn } from "../animations";
 import NavBar from "../components/NavBar";
@@ -10,8 +10,8 @@ import FooterFormSection from "../components/FooterFormSection";
 import FooterOutro from "../components/FooterOutro";
 
 export default function MainPage() {
-  const contactRef = useRef() as MutableRefObject<HTMLDivElement>;
-  const returnToTopRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const contactRef = useRef<HTMLDivElement | null>(null);
+  const returnToTopRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <>
